@@ -2,265 +2,265 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <footer class="footer">
-        <div class="footer-container">
-          <section class="footer-top">
-            <div class="footer-left">
-              <ul class="footer-col">
+    <>
+      <footer className="footer">
+        <div className="footer-container">
+          <section className="footer-top">
+            <div className="footer-left">
+              <ul className="footer-col">
                 <li>
-                  <span class="footer-col-heading">HEALTHKART</span>
+                  <span className="footer-col-heading">HEALTHKART</span>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Refer & Earn
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Loyalty Program
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Loyalty
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Blogs, Videos & More
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Brand Directory
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Authenticity Guaranteed
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Careers
                   </a>
                 </li>
               </ul>
-              <ul class="footer-col">
+              <ul className="footer-col">
                 <li>
-                  <span class="footer-col-heading">BRANDS</span>
+                  <span className="footer-col-heading">BRANDS</span>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     MuscleBlaze
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Fit Foods
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     HK Vitals
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     TrueBasics
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Gritzo
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     bGREEN
                   </a>
                 </li>
               </ul>
-              <ul class="footer-col">
+              <ul className="footer-col">
                 <li>
-                  <span class="footer-col-heading">HEALTH & FITNESS</span>
+                  <span className="footer-col-heading">HEALTH & FITNESS</span>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Bodybuilding
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Hair & Skin Care
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Sports Nutrition
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Vitamins & Supplements
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Ayurveda & Herbs
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Health Food & Drinks
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Fitness
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Wellness
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Consult Plans
                   </a>
                 </li>
               </ul>
-              <ul class="footer-col">
+              <ul className="footer-col">
                 <li>
-                  <span class="footer-col-heading">POLICIES</span>
+                  <span className="footer-col-heading">POLICIES</span>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Delivery Policy
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Returns Policy
                   </a>
                 </li>
               </ul>
-              <ul class="footer-col">
+              <ul className="footer-col">
                 <li>
-                  <span class="footer-col-heading">QUICK LINKS</span>
+                  <span className="footer-col-heading">QUICK LINKS</span>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     My Account
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Track Your Order
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Store Locator
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     HK Cash
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     HK Coupons
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     FAQs
                   </a>
                 </li>
                 <li>
-                  <a class="footer-links" href="#">
+                  <a className="footer-links" href="#">
                     Sell On HealthKart
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div class="footer-col last-footer-col">
-              <span class="footer-col-heading footer-side-heading">
+            <div className="footer-col last-footer-col">
+              <span className="footer-col-heading footer-side-heading">
                 ABOUT HEALTHKART
               </span>
-              <span class="footer-text">
+              <span className="footer-text">
                 HealthKart.com is India’s largest online health & fitness store
                 for men and women. Shop online from the latest collections of
                 health, fitness and similar products featuring the best brands.
               </span>
-              <span class="footer-col-heading footer-side-heading">
+              <span className="footer-col-heading footer-side-heading">
                 SUBSCRIBE TO OUR NEWSLETTER
               </span>
-              <span class="footer-text">
+              <span className="footer-text">
                 Be the first one to receive amazing offers, deals and news
               </span>
               <form action=""></form>
-              <div class="contacts">
-                <p class="contact-heading">CONNECT WITH US</p>
-                <div class="contact-links-container">
-                  <a class="contact-link" href="#">
+              <div className="contacts">
+                <p className="contact-heading">CONNECT WITH US</p>
+                <div className="contact-links-container">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-facebook"
                     ></ion-icon>
                   </a>
-                  <a class="contact-link" href="#">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-instagram"
                     ></ion-icon>
                   </a>
-                  <a class="contact-link" href="#">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-linkedin"
                     ></ion-icon>
                   </a>
-                  <a class="contact-link" href="#">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-twitter"
                     ></ion-icon>
                   </a>
-                  <a class="contact-link" href="#">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-youtube"
                     ></ion-icon>
                   </a>
-                  <a class="contact-link" href="#">
+                  <a className="contact-link" href="#">
                     <ion-icon
-                      class="contact-icon"
+                      className="contact-icon"
                       name="logo-pinterest"
                     ></ion-icon>
                   </a>
@@ -269,8 +269,8 @@ const Footer = () => {
             </div>
           </section>
           <hr />
-          <section class="footer-bottom">
-            <div class="seals">
+          <section className="footer-bottom">
+            <div className="seals">
               <a href="#">
                 <img
                   src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/hk-consult.svg
@@ -292,9 +292,9 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div class="disclaimer">
-              <span class="disclaimer-heading">Disclaimer:</span>
-              <span class="disclaimer-text">
+            <div className="disclaimer">
+              <span className="disclaimer-heading">Disclaimer:</span>
+              <span className="disclaimer-text">
                 The information contained on HealthKart (www.healthkart.com or
                 subdomains) is provided for informational purposes only and is
                 not meant to substitute for the advice provided by your doctor
@@ -310,16 +310,16 @@ const Footer = () => {
             </div>
           </section>
           <hr />
-          <section class="copyright-download">
-            <div class="copyright-text">
+          <section className="copyright-download">
+            <div className="copyright-text">
               Copyright &copy; 2022, HealthKart.com, or its affiliates
             </div>
-            <div class="download">
-              <span class="download-text">DOWNLOAD OUR APP</span>
-              <div class="download-icon">
+            <div className="download">
+              <span className="download-text">DOWNLOAD OUR APP</span>
+              <div className="download-icon">
                 <a href="#">
                   <img
-                    class="download-apple"
+                    className="download-apple"
                     src="	https://static1.hkrtcdn.com/hknext/static/media/common/footer/App-Store.svg
               "
                     alt="Available on the app store"
@@ -327,7 +327,7 @@ const Footer = () => {
                 </a>
                 <a href="#">
                   <img
-                    class="download-android"
+                    className="download-android"
                     src="	https://static1.hkrtcdn.com/hknext/static/media/common/footer/Google-Play.svg
               "
                     alt="Available on the app store"
@@ -338,7 +338,7 @@ const Footer = () => {
           </section>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 
