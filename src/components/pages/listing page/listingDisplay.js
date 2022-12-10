@@ -1,6 +1,6 @@
 import React from "react";
 
-const Page3 = () => {
+const ListingDisplay = () => {
   return (
     <>
       <h1>This is the third page of the application</h1>
@@ -11,4 +11,4 @@ const Page3 = () => {
   );
 };
 
-export default Page3;
+export default ListingDisplay;
