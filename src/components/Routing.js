@@ -11,6 +11,7 @@ import "./HeaderFooter/headerfooter.css";
 import HomePage from "./pages/HomePage/Home";
 import CategoryDisplay from "./pages/category/categoryDisplay";
 import ListingPage from "./pages/listing page/listing";
+import DetailsPage from "./pages/details/details";
 
 const AppRouter = () => {
   return (
@@ -23,6 +24,7 @@ const AppRouter = () => {
         <Route path="/page2" component={Page2} />
         <Route path="/page3" component={Page3} />
         <Route path="/listing/:categoryId" component={ListingPage} />
+        <Route path="/details" component={DetailsPage} />
         <Footer />
       </BrowserRouter>
     </>

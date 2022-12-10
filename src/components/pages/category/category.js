@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const categoryURL = "https://healthkart-render-api.onrender.com/categories";
 
 class Categories extends React.Component {
@@ -14,7 +15,7 @@ class Categories extends React.Component {
         return (
           <>
             <div>
-              <a href="#">{item.category}</a>
+              <Link to={`/listing/${item.category_id}`}>{item.category}</Link>
             </div>
           </>
         );
