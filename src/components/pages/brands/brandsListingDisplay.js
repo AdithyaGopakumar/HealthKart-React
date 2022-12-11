@@ -11,13 +11,13 @@ const BrandsListingDisplay = (props) => {
               <div className="col ">
                 <div className="product">
                   <div className="product-illustrations">
-                    <a href="#" class="to-product">
+                    <Link to={`/details?${item.id}`} class="to-product">
                       <img
                         id="product-img"
                         src={item.image}
                         alt={item.product_name}
                       />
-                    </a>
+                    </Link>
                     <div className="offer-tag">
                       <span className="offer">{item.offer}%</span>
                     </div>

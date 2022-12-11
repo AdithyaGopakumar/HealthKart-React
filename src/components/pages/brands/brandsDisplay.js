@@ -2,6 +2,7 @@ import React from "react";
 import Extras from "../../Elements/extras";
 import "../../Elements/extras.css";
 import Brand from "./brands";
+import DetailsPage from "../details/details";
 
 const BrandDisplay = () => {
   return (
@@ -11,6 +12,7 @@ const BrandDisplay = () => {
         <Brand />
       </div>
       <Extras />
+      <DetailsPage />
     </>
   );
 };
