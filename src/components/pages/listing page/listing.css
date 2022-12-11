@@ -6,6 +6,12 @@
 html {
   font-size: 62.5%;
 }
+#content {
+  display: grid !important;
+  grid-template-columns: repeat(3, 30%);
+  column-gap: 4%;
+  row-gap: 3rem;
+}
 .brand-container {
   width: 80%;
   margin: 0 auto;
@@ -26,8 +32,11 @@ html {
   border-radius: 9px;
   position: relative;
   background-color: #fff;
+  transition: all 0.2s;
 }
-
+.product:hover {
+  transform: scale(1.015);
+}
 #product-img {
   height: 12.8rem;
   width: auto;

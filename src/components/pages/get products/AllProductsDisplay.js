@@ -1,0 +1,20 @@
+import React from "react";
+import Extras from "../../Elements/extras";
+import "../../Elements/extras.css";
+import AllProducts from "./Allproducts";
+
+const AllProductsDisplay = () => {
+  return (
+    <>
+      <h1 className="container">Showing All Products</h1>
+      <div className="container">
+        <div className="row">
+          <AllProducts />
+        </div>
+      </div>
+      <Extras />
+    </>
+  );
+};
+
+export default AllProductsDisplay;

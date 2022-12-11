@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ListingDisplay = (props) => {
+const BrandsListingDisplay = (props) => {
   const renderData = ({ listData }) => {
     if (listData) {
       if (listData.length > 0) {
@@ -88,4 +88,4 @@ const ListingDisplay = (props) => {
   return <div id="content">{renderData(props)}</div>;
 };
 
-export default ListingDisplay;
+export default BrandsListingDisplay;
