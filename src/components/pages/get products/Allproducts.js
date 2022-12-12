@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const allrProductURL = "https://healthkart-render-api.onrender.com/allproducts";
 
 class AllProducts extends React.Component {
@@ -16,13 +17,13 @@ class AllProducts extends React.Component {
             <div class="item product-padding col-xl-3">
               <div class="product">
                 <div class="product-illustrations">
-                  <a href="#" class="to-product">
+                  <Link to={`/details?${item.id}`} class="to-product">
                     <img
                       id="product-img"
                       src={item.image}
                       alt={item.product_name}
                     />
-                  </a>
+                  </Link>
                   <a href="#">
                     <ion-icon
                       class="heart-icon"
@@ -34,9 +35,9 @@ class AllProducts extends React.Component {
                   </div>
                 </div>
                 <div class="product-details">
-                  <a href="#" class="to-product">
+                  <Link to={`/details?${item.id}`} class="to-product">
                     <span class="product-name">{item.product_name}</span>
-                  </a>
+                  </Link>
                   <div class="rating">
                     <ion-icon
                       class="rating-star"

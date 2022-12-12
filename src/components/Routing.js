@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDom from "react-dom/client";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Category from "./pages/category/category";
@@ -16,6 +16,8 @@ import BrandListingPage from "./pages/brands/brandslisting";
 // import DisplayDetails from "./pages/details/detailPageDisplay";
 import DetailsPage from "./pages/details/details";
 const AppRouter = () => {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <>
       <BrowserRouter>

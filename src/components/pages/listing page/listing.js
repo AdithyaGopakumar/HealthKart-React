@@ -12,11 +12,12 @@ class ListingPage extends React.Component {
 
     this.state = {
       productList: "",
+      category: "",
     };
   }
 
   render() {
-    console.log(this.state.productList, "this is from state");
+    // console.log(this.state.productList, "this is from state");
     return (
       <>
         <div className="brand-container">
@@ -133,7 +134,9 @@ class ListingPage extends React.Component {
                 </div>
               </div>
               <div className="col col-xl-9">
-                <h1 className="brand-">Popular picks from MuscleBlaze</h1>
+                <h1 className="brand-">
+                  Popular picks from {this.state.category}
+                </h1>
                 <div className="container products">
                   <div className="row">
                     <>
@@ -155,6 +158,7 @@ class ListingPage extends React.Component {
     axios.get(`${listingURL}${categoryId}`).then((res) => {
       this.setState({ productList: res.data });
       // console.log(res.data, `${listingURL}${categoryId}`);
+      this.setState({ category: res.data[0].category });
     });
   }
 }

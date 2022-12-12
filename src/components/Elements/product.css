@@ -1,6 +1,6 @@
 .products {
   max-width: 130rem;
-  margin: 6.4rem auto;
+  /* margin: 6.4rem auto; */
   padding: 3.6rem;
   border-radius: 9px;
   box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.075);

@@ -11,21 +11,21 @@ const ListingDisplay = (props) => {
               <div className="col ">
                 <div className="product">
                   <div className="product-illustrations">
-                    <a href="#" class="to-product">
+                    <Link to={`/details?${item.id}`} class="to-product">
                       <img
                         id="product-img"
                         src={item.image}
                         alt={item.product_name}
                       />
-                    </a>
+                    </Link>
                     <div className="offer-tag">
                       <span className="offer">{item.offer}%</span>
                     </div>
                   </div>
                   <div className="product-details">
-                    <a href="#" className="to-product">
+                    <Link to={`/details?${item.id}`} className="to-product">
                       <span className="product-name">{item.product_name}</span>
-                    </a>
+                    </Link>
                     <div className="rating">
                       <ion-icon
                         className="rating-star"

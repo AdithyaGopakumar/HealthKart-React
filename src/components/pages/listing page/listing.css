@@ -25,6 +25,9 @@ html {
   font-size: 1.6rem;
   font-weight: 400;
 }
+.brand {
+  margin-bottom: 2rem;
+}
 /* #### Product #### */
 .product {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.075);

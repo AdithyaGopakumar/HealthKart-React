@@ -23,9 +23,9 @@ const BrandsListingDisplay = (props) => {
                     </div>
                   </div>
                   <div className="product-details">
-                    <a href="#" className="to-product">
+                    <Link to={`/details?${item.id}`} className="to-product">
                       <span className="product-name">{item.product_name}</span>
-                    </a>
+                    </Link>
                     <div className="rating">
                       <ion-icon
                         className="rating-star"
@@ -85,7 +85,11 @@ const BrandsListingDisplay = (props) => {
     }
   };
 
-  return <div id="content">{renderData(props)}</div>;
+  return (
+    <>
+      <div id="content">{renderData(props)}</div>
+    </>
+  );
 };
 
 export default BrandsListingDisplay;

@@ -4,6 +4,7 @@ import "../listing page/listing.css";
 import BrandsListingDisplay from "./brandsListingDisplay";
 const BrandslistingURL =
   "https://healthkart-render-api.onrender.com/allproducts?brandId=";
+// const brandURL = "https://healthkart-render-api.onrender.com/brands";
 
 class BrandListingPage extends React.Component {
   constructor(props) {
@@ -11,11 +12,12 @@ class BrandListingPage extends React.Component {
 
     this.state = {
       brandProductList: "",
+      brand: "",
     };
   }
 
   render() {
-    console.log(this.state.brandProductList, "this is from state");
+    // console.log(this.state.brandProductList, "this is from state");
     return (
       <>
         <div className="brand-container">
@@ -132,11 +134,15 @@ class BrandListingPage extends React.Component {
                 </div>
               </div>
               <div className="col col-xl-9">
-                <h1 className="brand-">Popular picks from MuscleBlaze</h1>
                 <div className="container products">
                   <div className="row">
                     <>
-                      <BrandsListingDisplay listData={this.state.productList} />
+                      <h1 className="brand">
+                        Popular picks from {this.state.brand}
+                      </h1>
+                      <BrandsListingDisplay
+                        listData={this.state.brandProductList}
+                      />
                     </>
                   </div>
                 </div>
@@ -150,12 +156,27 @@ class BrandListingPage extends React.Component {
 
   componentDidMount() {
     let brandId = this.props.match.params.brandId;
+
     sessionStorage.setItem("brandId", brandId);
     axios.get(`${BrandslistingURL}${brandId}`).then((res) => {
-      this.setState({ productList: res.data });
-      console.log(res.data, `${BrandslistingURL}${brandId}`);
+      this.setState({ brandProductList: res.data });
+      // console.log(res.data, `${BrandslistingURL}${brandId}`);
+      this.setState({ brand: res.data[0].brand });
     });
+    // axios.get(`${brandURL}`).then((res) => {
+    //   this.setState({
+    //     brand: res.data.filter((item) => {
+    //       console.log(brandId);
+    //       return item.brand_id === brandId;
+    //     }),
+    //   });
+    //   console.log(
+    //     res.data.filter((item) => {
+    //       return item.brand_id === 2;
+    //     })
+    //   );
+    // });
   }
 }
-
+// console.log(this.state);
 export default BrandListingPage;

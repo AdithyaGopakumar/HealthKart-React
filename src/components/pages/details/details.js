@@ -5,8 +5,11 @@ import Extras from "../../Elements/extras";
 import "../../Elements/extras.css";
 import Advert from "../../Elements/advert";
 import "../../Elements/advert.css";
+import { Link } from "react-router-dom";
 
 const detailsURL = "https://healthkart-render-api.onrender.com/brands/";
+const brandsURL = "https://healthkart-render-api.onrender.com/brands";
+const categoryURL = "https://healthkart-render-api.onrender.com/categories";
 
 class DetailsPage extends React.Component {
   constructor(props) {
@@ -15,6 +18,8 @@ class DetailsPage extends React.Component {
 
     this.state = {
       details: "",
+      brandName: "",
+      categoryName: "",
       // brandID: sessionStorage.getItem("brandId"), // for backbutton
     };
   }
@@ -22,6 +27,7 @@ class DetailsPage extends React.Component {
   render() {
     const product = this.state.details;
     const interestPrice = Math.round(Number(product.sell_price) / 3);
+    const HkCoins = Math.round(Number(product.sell_price / 20));
     return (
       <>
         <main id="section-main">
@@ -35,16 +41,16 @@ class DetailsPage extends React.Component {
             </div>
 
             <div id="product-shop">
-              {/* <a class="tag" href="#">
-                Creatine
-              </a> */}
+              <Link id="tag" to={`/listing/${product.category_id}`}>
+                {product.category}
+              </Link>
               <h3 id="product-name">{product.product_name}</h3>
-              {/* <div class="manufacturer">
-                By{" "}
-                <a class="manufacturer-link" href="#">
-                  MuscleBlaze
-                </a>
-              </div> */}
+              <div id="manufacturer">
+                <span>By</span>
+                <Link id="manufacturer-link" to={`/brand/${product.brand_id}`}>
+                  {product.brand}
+                </Link>
+              </div>
               <div id="rating">
                 <div id="stars">
                   <ion-icon name="star"></ion-icon>
@@ -68,7 +74,7 @@ class DetailsPage extends React.Component {
             "
                     alt="hk coin"
                   />
-                  <span id="get-hkcoins-text"> Get HK Cash: ₹22</span>
+                  <span id="get-hkcoins-text"> Get HK Cash: ₹{HkCoins}</span>
                 </div>
               </div>
               <div id="pricing-details">
@@ -99,11 +105,11 @@ class DetailsPage extends React.Component {
               </div>
               <div id="check-out">
                 <div id="buy">
-                  <button id="add-to-cart btnx">
+                  <button id="add-to-cart">
                     <ion-icon id="buy-icon" name="cart-outline"></ion-icon>
                     <span>ADD TO CART</span>
                   </button>
-                  <button id="quick-buy btnx">
+                  <button id="quick-buy">
                     <ion-icon id="buy-icon" name="flash-outline"></ion-icon>
                     <span>QUICK BUY</span>
                   </button>
@@ -118,33 +124,17 @@ class DetailsPage extends React.Component {
     );
   }
 
-  //   componentDidMount() {
-  //     let productID = this.props.match.params.productID;
-  //     sessionStorage.setItem("productID", productID);
-  //     axios.get(`${detailsURL}${productID}`).then((res) => {
-  //       this.setState({ details: res.data });
-  //       console.log(res.data, `${detailsURL}${productID}`);
-  //     });
-  //   }
   async componentDidMount() {
     let productID = this.props.location.search.split("?")[1];
     let response = await axios.get(`${detailsURL}${productID}`);
     this.setState({ details: response.data[0] });
-    console.log(
-      response.data[0],
-      "this is product data from",
-      `${detailsURL}${productID}`
-    );
+    // console.log(
+    //   response.data[0],
+    //   "this is product data from",
+    //   `${detailsURL}${productID}`
+    // );
+    // get brand
   }
 }
-
-// componentDidMount() {
-//   let brandId = this.props.match.params.brandId;
-//   sessionStorage.setItem("brandId", brandId);
-//   axios.get(`${BrandslistingURL}${brandId}`).then((res) => {
-//     this.setState({ productList: res.data });
-//     console.log(res.data, `${BrandslistingURL}${brandId}`);
-//   });
-// }
 
 export default DetailsPage;
