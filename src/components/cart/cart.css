@@ -1,0 +1,22 @@
+.cart-container {
+  padding: 4rem;
+  border-radius: 9px;
+  box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.075);
+}
+.cart-img {
+  height: 10rem;
+  width: 10rem;
+}
+.cart-item-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.remove-item-btn {
+  margin-top: 2rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+}
+.place-order-btn {
+  margin-top: 1rem;
+}

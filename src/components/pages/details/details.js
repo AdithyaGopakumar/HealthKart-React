@@ -8,21 +8,28 @@ import "../../Elements/advert.css";
 import { Link } from "react-router-dom";
 
 const detailsURL = "https://healthkart-render-api.onrender.com/brands/";
-const brandsURL = "https://healthkart-render-api.onrender.com/brands";
-const categoryURL = "https://healthkart-render-api.onrender.com/categories";
+// const brandsURL = "https://healthkart-render-api.onrender.com/brands";
+// const categoryURL = "https://healthkart-render-api.onrender.com/categories";
 
 class DetailsPage extends React.Component {
   constructor(props) {
-    console.log(props, "these are the props");
+    // console.log(props, "these are the props");
     super(props);
 
     this.state = {
       details: "",
-      brandName: "",
-      categoryName: "",
+      // brandName: "",
+      // categoryName: "",
       // brandID: sessionStorage.getItem("brandId"), // for backbutton
     };
   }
+  // cart = [];
+  // const [cart, setCart] = useState([]);
+
+  // handleAddToCart = (item) => {
+  //   this.cart.push(item);
+  //   console.log(this.cart);
+  // };
 
   render() {
     const product = this.state.details;
@@ -105,7 +112,10 @@ class DetailsPage extends React.Component {
               </div>
               <div id="check-out">
                 <div id="buy">
-                  <button id="add-to-cart">
+                  <button
+                    id="add-to-cart"
+                    onClick={() => this.props.handleAddToCart(product)}
+                  >
                     <ion-icon id="buy-icon" name="cart-outline"></ion-icon>
                     <span>ADD TO CART</span>
                   </button>

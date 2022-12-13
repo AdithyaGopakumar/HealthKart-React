@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import ReactDom from "react-dom/client";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Category from "./pages/category/category";
@@ -15,8 +15,32 @@ import BrandDisplay from "./pages/brands/brandsDisplay";
 import BrandListingPage from "./pages/brands/brandslisting";
 // import DisplayDetails from "./pages/details/detailPageDisplay";
 import DetailsPage from "./pages/details/details";
+import Cart from "./cart/cart";
+import BrandsListingDisplay from "./pages/brands/brandsListingDisplay";
+import DetailsPageFunc from "./pages/details/detailFunc";
+
 const AppRouter = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cart, setCart] = useState([]);
+  console.log("this is the main cart", cart);
+  const cartIds = cart.map((item) => {
+    return item.id;
+  });
+  console.log(cartIds, "these are the ids of cart item");
+
+  const handleAddToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  const [ignored, forcedUpdate] = useReducer((x) => x + 1, 0);
+
+  const removeFromCart = (product) => {
+    if (cartIds.indexOf(product.id) > -1) {
+      let newCart = cart.splice(cartIds.indexOf(product.id), 1);
+      setCart(cart);
+      console.log("item clicked", cartIds.indexOf(product.id));
+      forcedUpdate();
+    }
+  };
 
   return (
     <>
@@ -25,12 +49,29 @@ const AppRouter = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/Category" component={CategoryDisplay} />
         <Route path="/AllProducts" component={AllProductsDisplay} />
-        <Route path="/Brands" component={BrandDisplay} />
+        <Route path="/Brands">
+          <BrandDisplay />
+        </Route>
         <Route path="/page2" component={Page2} />
         <Route path="/page3" component={Page3} />
         <Route path="/listing/:categoryId" component={ListingPage} />
         <Route path="/brand/:brandId" component={BrandListingPage} />
-        <Route path="/details" component={DetailsPage} />
+        <Route
+          path="/details"
+          render={(porps) => (
+            <DetailsPage
+              {...porps}
+              cart={cart}
+              setCart={setCart}
+              handleAddToCart={handleAddToCart}
+            />
+          )}
+        />
+        {/* <Route path="/cart" component={Cart} /> */}
+        <Route
+          path="/cart"
+          render={() => <Cart cart={cart} removeFromCart={removeFromCart} />}
+        />
         <Footer />
       </BrowserRouter>
     </>

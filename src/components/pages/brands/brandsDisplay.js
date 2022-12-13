@@ -12,7 +12,6 @@ const BrandDisplay = () => {
         <Brand />
       </div>
       <Extras />
-      <DetailsPage />
     </>
   );
 };

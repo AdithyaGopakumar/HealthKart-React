@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const BrandsListingDisplay = (props) => {
+  // console.log(addToCart.length, "this is the add to cart props");
+
+  // const [cart, setCart] = useState([]);
+
+  // const handleAddToCart = (item) => {
+  //   cart.push(item);
+  //   console.log(cart);
+  // };
+
   const renderData = ({ listData }) => {
     if (listData) {
       if (listData.length > 0) {
@@ -40,13 +49,16 @@ const BrandsListingDisplay = (props) => {
                         <span className="new-price">Rs.{item.sell_price}</span>
                         <span className="old-price">Rs.{item.old_price}</span>
                       </div>
-                      <a href="#" className="add-to-cart">
+                      <button
+                        className="add-to-cart"
+                        // onClick={() => handleAddToCart(item)}
+                      >
                         <ion-icon
                           class="cart-icon"
                           name="heart-outline"
                         ></ion-icon>
                         <span className="add-text">Add</span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                   <div className="premium-price">

@@ -17,7 +17,6 @@ class BrandListingPage extends React.Component {
   }
 
   render() {
-    // console.log(this.state.brandProductList, "this is from state");
     return (
       <>
         <div className="brand-container">

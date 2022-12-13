@@ -41,7 +41,7 @@ const Header = () => {
           <Link className="header-link" href="#">
             My Accounts & Orders
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="/cart">
             <ion-icon className="cart-icn" name="cart-outline"></ion-icon>
           </Link>
         </div>
