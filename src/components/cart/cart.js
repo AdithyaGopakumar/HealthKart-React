@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./cart.css";
+import Extras from "../Elements/extras";
+import "../Elements/extras.css";
 class Cart extends React.Component {
   constructor(props) {
     console.log(props.cart, "this is cart in cart");
@@ -16,46 +18,117 @@ class Cart extends React.Component {
     if (data) {
       return data.map((item) => {
         return (
-          <div key={item.id} className="col-md-6">
-            <div className="cart-single-item ">
-              <img
-                className="cart-img"
-                src={item.image}
-                alt={item.product_name}
-              />
-              <span className="cart-item-name">{item.product_name}</span>- Rs
-              {item.sell_price}
+          <div class="ind-item container">
+            <img
+              src={item.image}
+              alt={item.product_name}
+              class="cart-item-img"
+            />
+            <div class="cart-item-data">
+              <p class="cart-item-name">{item.product_name}</p>
+              <div class="cart-price-flex">
+                <span class="cart-item-price">₹ {item.sell_price}</span>
+                <span class="cart-item-offer">{item.offer}% OFF</span>
+              </div>
+              <div>
+                <span class="cart-item-mrp-text">MRP: </span>
+                <span class="cart-item-old-price">₹ {item.old_price}</span>
+              </div>
             </div>
-            <div className="col-md-4">
-              <button
-                className="remove-item-btn btn btn-danger"
-                onClick={() => {
-                  this.props.removeFromCart(item);
-                }}
-              >
-                <span className="remove-text">Remove From Cart</span>
-              </button>
-            </div>
+            <button
+              class="remove-item"
+              onClick={() => {
+                this.props.removeFromCart(item);
+              }}
+            >
+              <ion-icon name="trash-outline"></ion-icon>
+            </button>
           </div>
+          // <div key={item.id} className="col-md-6">
+          //   <div className="cart-single-item ">
+          //     <img
+          //       className="cart-img"
+          //       src={item.image}
+          //       alt={item.product_name}
+          //     />
+          //     <span className="cart-item-name">{item.product_name}</span>- Rs
+          //     {item.sell_price}
+          //   </div>
+          //   <div className="col-md-4">
+          //     <button
+          //       className="remove-item-btn btn btn-danger"
+          //       onClick={() => {
+          //         this.props.removeFromCart(item);
+          //       }}
+          //     >
+          //       <span className="remove-text">Remove From Cart</span>
+          //     </button>
+          //   </div>
+          // </div>
         );
       });
     }
   };
 
   render() {
-    let getTotal = this.props.cart.reduce((acc, curr) => {
+    let getTotal = this.state.currCart.reduce((acc, curr) => {
       return acc + curr.sell_price;
     }, 0);
-    console.log(getTotal, "the total");
+    let getMRP = this.state.currCart.reduce((acc, curr) => {
+      return acc + curr.old_price;
+    }, 0);
+    let discount = getMRP - getTotal;
+    console.log(getTotal, "the total", getMRP, discount);
     return (
-      <div className="container">
-        <h1 className="my-5">This Is Your Cart</h1>
-        <div className="cart-container container">
-          <div className="row">{this.renderCart(this.props.cart)}</div>
-          <h3 className="my-5">Your total is: Rs.{getTotal}</h3>
-          <button className="place-order-btn">Place Order</button>
-        </div>
-      </div>
+      <>
+        <section class="cart">
+          <div class="container">
+            <div class="row">
+              <div class="col col-md-7">
+                <div class="shopping-cart">
+                  <h1 class="cart-heading">
+                    Shopping Cart ({this.state.currCart.length} items)
+                  </h1>
+                  <>{this.renderCart(this.state.currCart)}</>
+                </div>
+              </div>
+              <div class="col col-md-5">
+                <div class="order-summary">
+                  <span class="summary">Order Summary</span>
+                  <span class="number-of-items">
+                    ({this.state.currCart.length} items)
+                  </span>
+                  <div class="total-mpr flex mt-5">
+                    <span class="price-text">Total MRP</span>
+                    <span class="mrp">₹ {getMRP}</span>
+                  </div>
+                  <div class="total-discounts flex">
+                    <span class="price-text">Total Discounts</span>
+                    <span class="discount">-₹ {discount}</span>
+                  </div>
+                  <div class="shipping-charge flex">
+                    <span class="price-text">Shipping Charges</span>
+                    <span class="free">FREE</span>
+                  </div>
+                  <hr />
+                  <div class="payable-amount flex">
+                    <span class="price-text-bold">Payable Amount</span>
+                    <span class="pay-rate">₹ {getTotal}</span>
+                  </div>
+                  <p class="show-savings">
+                    You will Save ₹ {discount} & Eligible for Free Shipping on
+                    this order
+                  </p>
+                  <button class="proceed-btn">
+                    Proceed to Pay ₹ {getTotal}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Extras />
+      </>
     );
   }
 }
