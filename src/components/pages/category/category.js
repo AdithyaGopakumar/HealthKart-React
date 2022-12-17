@@ -14,8 +14,22 @@ class Categories extends React.Component {
       return data.map((item) => {
         return (
           <>
-            <div>
-              <Link to={`/listing/${item.category_id}`}>{item.category}</Link>
+            <div class="brand-category-item">
+              <img
+                src={item.image}
+                alt=""
+                class="brand-category-img category-item-image"
+              />
+
+              <p class="brand-category-text">{item.text}</p>
+              <div class="to-brand-category">
+                <Link
+                  to={`/listing/${item.category_id}`}
+                  class="brand-category-link"
+                >
+                  Go to {item.category}
+                </Link>
+              </div>
             </div>
           </>
         );

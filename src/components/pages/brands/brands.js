@@ -14,8 +14,22 @@ class Brand extends React.Component {
       return data.map((item) => {
         return (
           <>
-            <div>
-              <Link to={`/brand/${item.brand_id}`}>{item.brand}</Link>
+            <div class="brand-category-item">
+              <img
+                src={item.image}
+                alt=""
+                class="brand-category-img category-item-img"
+              />
+
+              <p class="brand-category-text">{item.text}</p>
+              <div class="to-brand-category">
+                <Link
+                  to={`/brand/${item.brand_id}`}
+                  class="brand-category-link"
+                >
+                  Go to {item.brand}
+                </Link>
+              </div>
             </div>
           </>
         );
