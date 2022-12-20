@@ -23,7 +23,7 @@ class ListingPage extends React.Component {
         <div className="brand-container">
           <div className="container">
             <div className="row">
-              <div className="col col-xl-3">
+              {/* <div className="col col-xl-3">
                 <h2>Browse by</h2>
                 <div class="categories">
                   <h3>Category</h3>
@@ -132,7 +132,7 @@ class ListingPage extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="col col-xl-9">
                 <h1 className="brand-">
                   Popular picks from {this.state.category}

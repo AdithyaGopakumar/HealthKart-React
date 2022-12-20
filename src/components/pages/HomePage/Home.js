@@ -9,6 +9,7 @@ import Extras from "../../Elements/extras";
 import "../../Elements/extras.css";
 import OwlCarousel from "../../owlCarousel/owlCarousel";
 import "../../Elements/product.css";
+import FilterNav from "../../filters/filterNav";
 
 const flashSaleURL =
   "https://healthkart-render-api.onrender.com/allproducts/flashsale";
@@ -48,6 +49,7 @@ class HomePage extends React.Component {
         <OwlCarousel />
         <QuickSearch />
         <Advert />
+        <FilterNav />
         <Extras />
       </>
     );

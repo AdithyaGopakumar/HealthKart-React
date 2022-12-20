@@ -6,7 +6,7 @@ class OwlCarousel extends React.Component {
     return (
       <>
         <section class="products">
-          {/* <div class="section-top">
+          <div class="section-top">
             <div class="section-heading">
               <ion-icon name="flash-outline"></ion-icon>
               <span>Flash sale</span>
@@ -17,11 +17,11 @@ class OwlCarousel extends React.Component {
               </a>
             </div>
           </div>
-          <hr /> */}
-          {/* <div class="product-list"> */}
-          <div class="owl-carousel ">
-            <FlashSale />
-            {/* </div> */}
+          <hr />
+          <div class="product-list">
+            <div class="owl-carousel ">
+              <FlashSale />
+            </div>
           </div>
         </section>
       </>

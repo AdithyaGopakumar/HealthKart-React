@@ -55,11 +55,11 @@ const Header = () => {
             alt="Bulb"
           />
         </button>
+        <Link className="header-link" to="/Brands">
+          Brands
+        </Link>
         <Link className="header-link" to="/Category">
           Category
-        </Link>
-        <Link className="header-link" to="/Brands">
-          Brand
         </Link>
         <Link className="header-link" to="/AllProducts">
           All Products
