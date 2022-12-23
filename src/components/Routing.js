@@ -16,6 +16,8 @@ import BrandListingPage from "./pages/brands/brandslisting";
 // import DisplayDetails from "./pages/details/detailPageDisplay";
 import DetailsPage from "./pages/details/details";
 import Cart from "./cart/cart";
+import PlaceOrder from "./orders/placeOrder";
+import ViewOrders from "./orders/viewOrder";
 import BrandsListingDisplay from "./pages/brands/brandsListingDisplay";
 import DetailsPageFunc from "./pages/details/detailFunc";
 
@@ -72,6 +74,12 @@ const AppRouter = () => {
           path="/cart"
           render={() => <Cart cart={cart} removeFromCart={removeFromCart} />}
         />
+        {/* <Route path="/placeOrder" component={PlaceOrder} /> */}
+        <Route
+          path="/placeOrder"
+          render={(porps) => <PlaceOrder cart={cart} {...porps} />}
+        />
+        <Route path="/viewOrders" component={ViewOrders} />
         <Footer />
       </BrowserRouter>
     </>

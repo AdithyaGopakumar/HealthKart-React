@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./cart.css";
 import Extras from "../Elements/extras";
 import "../Elements/extras.css";
+import { Link } from "react-router-dom";
 class Cart extends React.Component {
   constructor(props) {
     console.log(props.cart, "this is cart in cart");
@@ -119,9 +120,12 @@ class Cart extends React.Component {
                     You will Save ₹ {discount} & Eligible for Free Shipping on
                     this order
                   </p>
-                  <button class="proceed-btn">
+                  {/* <button class="proceed-btn">
                     Proceed to Pay ₹ {getTotal}
-                  </button>
+                  </button> */}
+                  <Link to="/placeOrder" className="proceed-btn">
+                    Proceed to Pay ₹ {getTotal}
+                  </Link>
                 </div>
               </div>
             </div>
