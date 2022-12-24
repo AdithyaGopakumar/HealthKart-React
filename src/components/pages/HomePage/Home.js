@@ -10,7 +10,7 @@ import "../../Elements/extras.css";
 import OwlCarousel from "../../owlCarousel/owlCarousel";
 import "../../Elements/product.css";
 import FilterNav from "../../filters/filterNav";
-
+import Header from "../../HeaderFooter/header";
 const flashSaleURL =
   "https://healthkart-render-api.onrender.com/allproducts/flashsale";
 const trendingNowURL =
@@ -45,6 +45,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <>
+        <Header />
         <AddCarousel />
         <OwlCarousel />
         <QuickSearch />

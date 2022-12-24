@@ -6,6 +6,7 @@ import CategoryFilter from "../../filters/categoryFilter";
 import CostFilter from "../../filters/costFilter";
 import { Link } from "react-router-dom";
 import FilterNav from "../../filters/filterNav";
+import Header from "../../HeaderFooter/header";
 
 const BrandslistingURL =
   "https://healthkart-render-api.onrender.com/allproducts?brandId=";
@@ -35,6 +36,7 @@ class BrandListingPage extends React.Component {
     // this.handleButtonClick();
     return (
       <>
+        <Header />
         <div key={this.props.match.params.brandId} className="brand-container">
           <div className="container">
             <div className="row">

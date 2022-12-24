@@ -5,7 +5,7 @@ import Category from "./pages/category/category";
 import AllProductsDisplay from "./pages/get products/AllProductsDisplay";
 import Page2 from "./pages/get products/Allproducts";
 import Page3 from "./pages/listing page/listing";
-import Header from "./HeaderFooter/header";
+// import Header from "./HeaderFooter/header";
 import Footer from "./HeaderFooter/footer";
 import "./HeaderFooter/headerfooter.css";
 import HomePage from "./pages/HomePage/Home";
@@ -18,6 +18,8 @@ import DetailsPage from "./pages/details/details";
 import Cart from "./cart/cart";
 import PlaceOrder from "./orders/placeOrder";
 import ViewOrders from "./orders/viewOrder";
+import Login from "./login/login";
+import Register from "./login/register";
 import BrandsListingDisplay from "./pages/brands/brandsListingDisplay";
 import DetailsPageFunc from "./pages/details/detailFunc";
 
@@ -47,15 +49,15 @@ const AppRouter = () => {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
         <Route exact path="/" component={HomePage} />
         <Route path="/Category" component={CategoryDisplay} />
         <Route path="/AllProducts" component={AllProductsDisplay} />
         <Route path="/Brands">
           <BrandDisplay />
         </Route>
-        <Route path="/page2" component={Page2} />
-        <Route path="/page3" component={Page3} />
+        {/* <Route path="/page2" component={Page2} /> */}
+        {/* <Route path="/page3" component={Page3} /> */}
         <Route path="/listing/:categoryId" component={ListingPage} />
         <Route path="/brand/:brandId" component={BrandListingPage} />
         <Route
@@ -80,6 +82,8 @@ const AppRouter = () => {
           render={(porps) => <PlaceOrder cart={cart} {...porps} />}
         />
         <Route path="/viewOrders" component={ViewOrders} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Footer />
       </BrowserRouter>
     </>

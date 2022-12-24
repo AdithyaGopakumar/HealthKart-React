@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import "./listing.css";
 import ListingDisplay from "./listingDisplay";
+import Header from "../../HeaderFooter/header";
 
 const listingURL =
   "https://healthkart-render-api.onrender.com/allproducts?categoryId=";
@@ -20,6 +21,7 @@ class ListingPage extends React.Component {
     // console.log(this.state.productList, "this is from state");
     return (
       <>
+        <Header />
         <div className="brand-container">
           <div className="container">
             <div className="row">

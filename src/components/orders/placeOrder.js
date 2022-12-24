@@ -1,5 +1,6 @@
 import React from "react";
 import "../orders/placeOrder.css";
+import Header from "../HeaderFooter/header";
 
 // const URL = "https://healthkart-render-api.onrender.com/cart";
 const URL = "http://localhost:8700/cart";
@@ -67,6 +68,7 @@ class PlaceOrder extends React.Component {
     }, 0);
     return (
       <>
+        <Header />
         <div className="container">
           <div className="panel panel-primary">
             <div className="panel-heading">Your Orders</div>
@@ -156,7 +158,7 @@ class PlaceOrder extends React.Component {
     }, 0);
     this.setState({ total: total });
     let orders = this.props.cart;
-    // console.log(orders, "this is orders");
+    console.log(orders, "this is orders");
     fetch(URL, {
       method: "POST",
       headers: {
@@ -167,7 +169,7 @@ class PlaceOrder extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data, "this is in db");
+        console.log(data, "this is in db");
       });
   }
 }

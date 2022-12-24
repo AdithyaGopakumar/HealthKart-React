@@ -3,6 +3,8 @@ import "./cart.css";
 import Extras from "../Elements/extras";
 import "../Elements/extras.css";
 import { Link } from "react-router-dom";
+import Header from "../HeaderFooter/header";
+
 class Cart extends React.Component {
   constructor(props) {
     console.log(props.cart, "this is cart in cart");
@@ -82,6 +84,7 @@ class Cart extends React.Component {
     console.log(getTotal, "the total", getMRP, discount);
     return (
       <>
+        <Header />
         <section class="cart">
           <div class="container">
             <div class="row">

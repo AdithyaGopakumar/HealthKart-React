@@ -6,6 +6,7 @@ import "../../Elements/extras.css";
 import Advert from "../../Elements/advert";
 import "../../Elements/advert.css";
 import { Link } from "react-router-dom";
+import Header from "../../HeaderFooter/header";
 
 const detailsURL = "https://healthkart-render-api.onrender.com/brands/";
 // const brandsURL = "https://healthkart-render-api.onrender.com/brands";
@@ -37,6 +38,7 @@ class DetailsPage extends React.Component {
     const HkCoins = Math.round(Number(product.sell_price / 20));
     return (
       <>
+        <Header />
         <main id="section-main">
           <section id="product">
             <div id="product-illustrations">
