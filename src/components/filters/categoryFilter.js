@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import "./filters.css";
 const filterURL = "https://healthkart-render-api.onrender.com/filter";
 
 class CategoryFilter extends React.Component {
@@ -21,34 +21,44 @@ class CategoryFilter extends React.Component {
   render() {
     return (
       <>
-        <center>
-          <h3>Categories</h3>
-        </center>
+        <h3 className="filter-headings">Categories</h3>
         <div onChange={this.categoryFilter}>
-          <label className="radio">
-            <input type="radio" name="category" value="" />
-            All
-          </label>
-          <label className="radio">
-            <input type="radio" name="category" value="1" />
-            Protein
-          </label>
-          <label className="radio">
-            <input type="radio" name="category" value="2" />
-            Gainer
-          </label>
-          <label className="radio">
-            <input type="radio" name="category" value="3" />
-            Supplement
-          </label>
-          <label className="radio">
-            <input type="radio" name="category" value="4" />
-            Creatine
-          </label>
-          <label className="radio">
-            <input type="radio" name="category" value="5" />
-            Pre-workout
-          </label>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="" />
+              All
+            </label>
+          </div>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="1" />
+              Protein
+            </label>
+          </div>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="2" />
+              Gainer
+            </label>
+          </div>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="3" />
+              Supplement
+            </label>
+          </div>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="4" />
+              Creatine
+            </label>
+          </div>
+          <div className="filter-option">
+            <label className="radio">
+              <input type="radio" name="category" value="5" />
+              Pre-workout
+            </label>
+          </div>
         </div>
       </>
     );

@@ -55,16 +55,23 @@ html {
   box-shadow: 0 0 2.4rem rgba(0, 0, 0, 0.075);
   /* height: 50rem; */
 }
-.proceed-btn {
+.proceed-btn:link,
+.proceed-btn:visited {
   width: 100%;
   display: block;
   margin: 2rem auto;
   font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
   border-radius: 9px;
   border: none;
   padding: 1rem;
   color: #fff;
   background-color: #00b5b7;
+}
+.proceed-btn:hover,
+.proceed-btn:active {
+  color: #fff;
 }
 .ind-item {
   width: 95%;

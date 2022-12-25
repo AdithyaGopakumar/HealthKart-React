@@ -15,10 +15,10 @@ class PlaceOrder extends React.Component {
     // let sessionData
     this.state = {
       id: Math.floor(Math.random() * 10000),
-      user: "Ankit",
-      email: "ankit@123.com",
-      address: "123 building, abc street, Kochi",
-      phone: 9879879870,
+      user: "",
+      email: "",
+      address: "",
+      phone: "",
       total: 0,
       items: [],
     };
@@ -45,14 +45,14 @@ class PlaceOrder extends React.Component {
       return data.map((item) => {
         return (
           <>
-            <div className="order-cart-list" key={item.id}>
+            <div className="order-cart-list col col-md-3" key={item.id}>
               <img
                 className="order-cart-img"
                 src={item.image}
                 alt={item.product_name}
               />
-              <h3 className="order-cart-name">{item.product_name}</h3>
-              <h4 className="order-cart-price">{item.sell_price}</h4>
+              <h4 className="order-cart-name">{item.product_name}</h4>
+              <h5 className="order-cart-price">Rs. {item.sell_price}</h5>
             </div>
           </>
         );
@@ -71,7 +71,7 @@ class PlaceOrder extends React.Component {
         <Header />
         <div className="container">
           <div className="panel panel-primary">
-            <div className="panel-heading">Your Orders</div>
+            <h1 className="panel-heading order-heading">Your Orders</h1>
             <div className="panel-body">
               <form action="http://localhost:4100/paynow" method="POST">
                 <input
@@ -82,62 +82,67 @@ class PlaceOrder extends React.Component {
                 <input type="hidden" name="total" value={this.state.total} />
                 <div className="row">
                   <div className="form-group col-md-6">
-                    <label for="user" className="control-label">
+                    <label for="user" className="control-label input-txt">
                       Your Name
                     </label>
                     <input
-                      className="form-control"
+                      className="form-control input-box"
                       id="user"
                       name="user"
                       value={this.state.user}
                       onChange={this.handleChange}
+                      placeholder="Enter Your Name"
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="email" className="control-label">
+                    <label for="email" className="control-label input-txt">
                       Email
                     </label>
                     <input
-                      className="form-control"
+                      className="form-control input-box"
                       id="email"
                       name="email"
                       value={this.state.email}
                       onChange={this.handleChange}
+                      placeholder="Enter Your Email"
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="address" className="control-label">
+                    <label for="address" className="control-label input-txt">
                       Address
                     </label>
                     <input
-                      className="form-control"
+                      className="form-control input-box"
                       id="address"
                       name="address"
                       value={this.state.address}
                       onChange={this.handleChange}
+                      placeholder="Enter Your Address"
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="phone" className="control-label">
+                    <label for="phone" className="control-label input-txt">
                       Phone
                     </label>
                     <input
-                      className="form-control"
+                      className="form-control input-box"
                       id="phone"
                       name="phone"
                       value={this.state.phone}
                       onChange={this.handleChange}
+                      placeholder="Enter Your Mobile Number"
                     />
                   </div>
                 </div>
-                {this.renderCart(this.props.cart)}
+                <h2 className="order-cart-heading">Products From Your Cart</h2>
+                <div className="row">{this.renderCart(this.props.cart)}</div>
                 <div className="row">
                   <div className="col-md-12">
-                    <h2>Your Total : Rs.{total}</h2>
+                    <h2 className="order-total">Your Total : Rs.{total}</h2>
                   </div>
                 </div>
                 <button
-                  className="btn btn-success"
+                  className="check-out-btn"
                   onClick={this.checkOut}
                   type="submit"
                 >
