@@ -11,6 +11,7 @@ class Brand extends React.Component {
   }
   getBrand = (data) => {
     if (data) {
+      // console.log(data);
       return data.map((item) => {
         return (
           <>
@@ -45,9 +46,10 @@ class Brand extends React.Component {
     fetch(brandURL, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         this.setState({ brands: data });
       });
+    console.log(this.state.brands, "this is the state");
   }
 }
 

@@ -125,10 +125,10 @@ class Header extends React.Component {
           <Link className="header-link" to="/AllProducts">
             All Products
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="/bestsellers">
             Best-Seller
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="/deals">
             Deals
           </Link>
           <Link className="header-link" href="#">

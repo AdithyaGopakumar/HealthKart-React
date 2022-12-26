@@ -7,9 +7,12 @@ import Advert from "../../Elements/advert";
 import "../../Elements/advert.css";
 import Extras from "../../Elements/extras";
 import "../../Elements/extras.css";
-import OwlCarousel from "../../owlCarousel/owlCarousel";
 import "../../Elements/product.css";
-import FilterNav from "../../filters/filterNav";
+import FlashSaleCarousel from "../../Carousel/flashSale";
+import TrendingNowCarousel from "../../Carousel/trendingNow";
+import TrendingWheyCarousel from "../../Carousel/trendingWhey";
+import GainersCarousel from "../../Carousel/gainers";
+
 import Header from "../../HeaderFooter/header";
 const flashSaleURL =
   "https://healthkart-render-api.onrender.com/allproducts/flashsale";
@@ -47,10 +50,14 @@ class HomePage extends React.Component {
       <>
         <Header />
         <AddCarousel />
-        <OwlCarousel />
+        {/* <OwlCarousel /> */}
+        <FlashSaleCarousel />
+        <TrendingNowCarousel />
         <QuickSearch />
+        <TrendingWheyCarousel />
+        <GainersCarousel />
         <Advert />
-        <FilterNav />
+        {/* <FilterNav /> */}
         <Extras />
       </>
     );

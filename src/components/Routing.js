@@ -1,10 +1,8 @@
 import React, { useReducer, useState } from "react";
 import ReactDom from "react-dom/client";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Category from "./pages/category/category";
 import AllProductsDisplay from "./pages/get products/AllProductsDisplay";
-import Page2 from "./pages/get products/Allproducts";
-import Page3 from "./pages/listing page/listing";
 // import Header from "./HeaderFooter/header";
 import Footer from "./HeaderFooter/footer";
 import "./HeaderFooter/headerfooter.css";
@@ -20,8 +18,11 @@ import PlaceOrder from "./orders/placeOrder";
 import ViewOrders from "./orders/viewOrder";
 import Login from "./login/login";
 import Register from "./login/register";
+import BestSellerPage from "./pages/bestsellers";
+import DealsPage from "./pages/dealspage";
 import BrandsListingDisplay from "./pages/brands/brandsListingDisplay";
 import DetailsPageFunc from "./pages/details/detailFunc";
+import Carousel from "./Carousel/flashSale";
 
 const AppRouter = () => {
   const [cart, setCart] = useState([]);
@@ -49,41 +50,40 @@ const AppRouter = () => {
   return (
     <>
       <BrowserRouter>
-        {/* <Header /> */}
-        <Route exact path="/" component={HomePage} />
-        <Route path="/Category" component={CategoryDisplay} />
-        <Route path="/AllProducts" component={AllProductsDisplay} />
-        <Route path="/Brands">
-          <BrandDisplay />
-        </Route>
-        {/* <Route path="/page2" component={Page2} /> */}
-        {/* <Route path="/page3" component={Page3} /> */}
-        <Route path="/listing/:categoryId" component={ListingPage} />
-        <Route path="/brand/:brandId" component={BrandListingPage} />
-        <Route
-          path="/details"
-          render={(porps) => (
-            <DetailsPage
-              {...porps}
-              cart={cart}
-              setCart={setCart}
-              handleAddToCart={handleAddToCart}
-            />
-          )}
-        />
-        {/* <Route path="/cart" component={Cart} /> */}
-        <Route
-          path="/cart"
-          render={() => <Cart cart={cart} removeFromCart={removeFromCart} />}
-        />
-        {/* <Route path="/placeOrder" component={PlaceOrder} /> */}
-        <Route
-          path="/placeOrder"
-          render={(porps) => <PlaceOrder cart={cart} {...porps} />}
-        />
-        <Route path="/viewOrders" component={ViewOrders} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/Category" component={CategoryDisplay} />
+          <Route path="/AllProducts" component={AllProductsDisplay} />
+          <Route path="/Brands">
+            <BrandDisplay />
+          </Route>
+          <Route path="/listing/:categoryId" component={ListingPage} />
+          <Route path="/brand/:brandId" component={BrandListingPage} />
+          <Route
+            path="/details"
+            render={(porps) => (
+              <DetailsPage
+                {...porps}
+                cart={cart}
+                setCart={setCart}
+                handleAddToCart={handleAddToCart}
+              />
+            )}
+          />
+          <Route
+            path="/cart"
+            render={() => <Cart cart={cart} removeFromCart={removeFromCart} />}
+          />
+          <Route
+            path="/placeOrder"
+            render={(porps) => <PlaceOrder cart={cart} {...porps} />}
+          />
+          <Route path="/viewOrders" component={ViewOrders} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/bestsellers" component={BestSellerPage} />
+          <Route path="/deals" component={DealsPage} />
+        </Switch>
         <Footer />
       </BrowserRouter>
     </>
