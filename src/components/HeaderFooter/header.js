@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import AppRouter from "../Routing";
+// import AppRouter from "../Routing";
 
 const getUserUrl = "http://localhost:5000/api/auth/userInfo";
 
@@ -15,34 +15,15 @@ class Header extends React.Component {
 
   handleLogOut = () => {
     sessionStorage.removeItem("token");
+    sessionStorage.removeItem("userData");
+    // console.log(this.state.userData, "data after logout");
     this.setState({ userData: "" });
-    console.log(this.state.userData);
+    this.props.history.push("/");
   };
 
   conditionalHeader = () => {
-    if (this.state.userData) {
+    if (this.state.userData.auth === false || this.state.userData === "") {
       // console.log(this.state.userData, "form if");
-      return (
-        <>
-          <Link className="header-link" href="#">
-            My Accounts & Orders
-          </Link>
-          <Link className="header-link" to={"/"}>
-            Account name
-          </Link>
-          <button
-            className="header-link buttob-link"
-            onClick={this.handleLogOut}
-          >
-            Logout
-          </button>
-          <Link className="header-link" to="/cart">
-            <ion-icon className="cart-icn" name="cart-outline"></ion-icon>
-          </Link>
-        </>
-      );
-    } else {
-      // console.log(this.state.userData, "form else");
       return (
         <>
           <Link className="header-link" href="#">
@@ -54,9 +35,31 @@ class Header extends React.Component {
           <Link className="header-link" to={"/login"}>
             Login
           </Link>
-          {/* <Link className="header-link" to="/cart">
+        </>
+      );
+    } else {
+      // console.log(this.state.userData, "form else");
+      let data = this.state.userData;
+      let outArr = [data.name, data.email];
+      console.log(outArr);
+      sessionStorage.setItem("userData", outArr);
+      return (
+        <>
+          <Link className="header-link" href="#">
+            My Accounts & Orders
+          </Link>
+          <Link className="header-link" to={"/"}>
+            Welcome {this.state.userData.name.split(" ")[0]}
+          </Link>
+          <button
+            className="header-link buttob-link"
+            onClick={this.handleLogOut}
+          >
+            Logout
+          </button>
+          <Link className="header-link" to="/cart">
             <ion-icon className="cart-icn" name="cart-outline"></ion-icon>
-          </Link> */}
+          </Link>
         </>
       );
     }

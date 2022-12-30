@@ -12,11 +12,15 @@ class PlaceOrder extends React.Component {
   constructor(props) {
     super(props);
 
+    let sessionData = sessionStorage.getItem("userData")
+      ? sessionStorage.getItem("userData").split(",")
+      : [];
+
     // let sessionData
     this.state = {
       id: Math.floor(Math.random() * 10000),
-      user: "",
-      email: "",
+      user: sessionData ? sessionData[0] : "",
+      email: sessionData ? sessionData[1] : "",
       address: "",
       phone: "",
       total: 0,

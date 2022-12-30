@@ -24,6 +24,10 @@ class ViewOrders extends React.Component {
   }
 
   componentDidMount() {
+    let sessionData = sessionStorage.getItem("userData")
+      ? sessionStorage.getItem("userData").split(",")
+      : [];
+
     axios.get(`${orderApi}`).then((res) => {
       console.log(res.data, "this is data from order api");
       this.setState({ orders: res.data });

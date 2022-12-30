@@ -16,7 +16,7 @@ class Login extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   handleSubmit = (e) => {
@@ -31,7 +31,7 @@ class Login extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         if (data.auth === false) {
           this.setState({ message: data.token });
         } else {
