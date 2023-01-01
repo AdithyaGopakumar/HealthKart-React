@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const brandURL = "https://healthkart-render-api.onrender.com/brands";
+const brandURL = "http://localhost:9800/brands";
+// const brandURL = "https://healthkart-render-api.onrender.com/brands";
 
 class Brand extends React.Component {
   constructor() {

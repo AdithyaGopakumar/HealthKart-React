@@ -5,8 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Link } from "react-router-dom";
 
-const flashSaleURL =
-  "https://healthkart-render-api.onrender.com/allproducts/flashsale";
+const flashSaleURL = "http://localhost:9800/allproducts/flashsale";
+// const flashSaleURL =
+//   "https://healthkart-render-api.onrender.com/allproducts/flashsale";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;

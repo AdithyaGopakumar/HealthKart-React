@@ -51,14 +51,13 @@ class Header extends React.Component {
           <Link className="header-link" to={"/"}>
             Welcome {this.state.userData.name.split(" ")[0]}
           </Link>
-          <button
-            className="header-link buttob-link"
-            onClick={this.handleLogOut}
-          >
+          <button className="logout-btn" onClick={this.handleLogOut}>
             Logout
           </button>
           <Link className="header-link" to="/cart">
-            <ion-icon className="cart-icn" name="cart-outline"></ion-icon>
+            <div className="cart-icn">
+              <ion-icon name="cart-outline"></ion-icon>
+            </div>
           </Link>
         </>
       );

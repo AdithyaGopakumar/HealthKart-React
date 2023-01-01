@@ -40,8 +40,8 @@ class PlaceOrder extends React.Component {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(this.state),
-    }).then(console.log("order placed"));
-    // .then(this.props.history.push("viewOrders"));
+    }).then(this.props.history.push("viewOrders"));
+    // .then(console.log("order placed"));
   };
 
   renderCart = (data) => {
@@ -77,7 +77,8 @@ class PlaceOrder extends React.Component {
           <div className="panel panel-primary">
             <h1 className="panel-heading order-heading">Your Orders</h1>
             <div className="panel-body">
-              <form action="http://localhost:4100/paynow" method="POST">
+              {/* <form action="http://localhost:4100/paynow" method="POST"> */}
+              <form>
                 <input
                   type="hidden"
                   name="order_id"

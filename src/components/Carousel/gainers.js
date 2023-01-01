@@ -5,7 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
 const gainersURL =
-  "https://healthkart-render-api.onrender.com/allproducts/gainers";
+  "http://localhost:9800/allproducts/gainers";
+// const gainersURL =
+//   "https://healthkart-render-api.onrender.com/allproducts/gainers";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;

@@ -8,7 +8,8 @@ import "../../Elements/advert.css";
 import { Link } from "react-router-dom";
 import Header from "../../HeaderFooter/header";
 
-const detailsURL = "https://healthkart-render-api.onrender.com/brands/";
+const detailsURL = "http://localhost:9800/brands/";
+// const detailsURL = "https://healthkart-render-api.onrender.com/brands/";
 // const brandsURL = "https://healthkart-render-api.onrender.com/brands";
 // const categoryURL = "https://healthkart-render-api.onrender.com/categories";
 

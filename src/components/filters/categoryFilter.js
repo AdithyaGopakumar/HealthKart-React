@@ -1,7 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./filters.css";
-const filterURL = "https://healthkart-render-api.onrender.com/filter";
+const filterURL = "http://localhost:9800/filterinbrand";
+// const filterURL = "https://healthkart-render-api.onrender.com/filter";
 
 class CategoryFilter extends React.Component {
   categoryFilter = (e) => {

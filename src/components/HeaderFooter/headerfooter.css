@@ -60,7 +60,7 @@ html {
   color: #02b4b2;
 }
 .cart-icn {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 .header-bottom {
   display: flex;
@@ -96,7 +96,14 @@ html {
 .bulb-img {
   height: 2.4rem;
 }
-
+.logout-btn {
+  background-color: #02b4b2;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 1.2rem;
+}
 /* ************************************ */
 /* Footer Section */
 /* ************************************ */

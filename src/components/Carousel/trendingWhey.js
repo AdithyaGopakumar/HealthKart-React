@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-const trendingWheyURL =
-  "https://healthkart-render-api.onrender.com/allproducts/trendingwhey";
+const trendingWheyURL = "http://localhost:9800/allproducts/trendingwhey";
+// const trendingWheyURL =
+//   "https://healthkart-render-api.onrender.com/allproducts/trendingwhey";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;

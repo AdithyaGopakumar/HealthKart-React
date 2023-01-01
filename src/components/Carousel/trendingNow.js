@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 
-const trendingNowURL =
-  "https://healthkart-render-api.onrender.com/allproducts/trending";
+const trendingNowURL = "http://localhost:9800/allproducts/trending";
+// const trendingNowURL =
+//   "https://healthkart-render-api.onrender.com/allproducts/trending";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;

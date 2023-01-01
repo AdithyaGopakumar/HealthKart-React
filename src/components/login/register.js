@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "../HeaderFooter/header";
+import "./login.css";
+
 const registerUrl = "http://localhost:5000/api/auth/register";
 
 class Register extends React.Component {
@@ -7,10 +9,10 @@ class Register extends React.Component {
     super();
 
     this.state = {
-      name: "Nikitha",
-      email: "nikitha@gmail.com",
-      password: "12345678",
-      phone: "79878879",
+      name: "",
+      email: "",
+      password: "",
+      phone: "",
     };
   }
 
@@ -35,57 +37,65 @@ class Register extends React.Component {
       <>
         <Header />
         <div className="container">
-          <h3>Register</h3>
+          <h1 className="login-heading">Register</h1>
           <form className="row">
             <div class="form-group col-md-6">
-              <label for="name">Name</label>
+              <label for="name" className="input-headings">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
                 placeholder="Enter Your Name"
                 value={this.state.name}
-                class="form-control"
+                class="form-control input-box"
                 id="name"
                 onChange={this.handleChange}
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="email">Email</label>
+              <label for="email" className="input-headings">
+                Email
+              </label>
               <input
                 type="text"
                 name="email"
                 placeholder="Enter Your email"
                 value={this.state.email}
-                class="form-control"
+                class="form-control input-box"
                 id="email"
                 onChange={this.handleChange}
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="password">Password</label>
+              <label for="password" className="input-headings">
+                Password
+              </label>
               <input
                 type="text"
                 name="password"
                 placeholder="Enter Your Password"
                 value={this.state.password}
-                class="form-control"
+                class="form-control input-box"
                 id="password"
                 onChange={this.handleChange}
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="phone">phone</label>
+              <label for="phone" className="input-headings">
+                Phone
+              </label>
               <input
                 type="text"
                 name="phone"
                 placeholder="Enter Your Phone Number"
                 value={this.state.phone}
-                class="form-control"
+                class="form-control input-box"
                 id="phone"
                 onChange={this.handleChange}
               />
             </div>
-            <button className="btn btn-success" onClick={this.handleSubmit}>
+            <button className="btn register-btn" onClick={this.handleSubmit}>
               Register
             </button>
           </form>

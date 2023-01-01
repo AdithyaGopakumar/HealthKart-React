@@ -8,8 +8,9 @@ import { Link } from "react-router-dom";
 import FilterNav from "../../filters/filterNav";
 import Header from "../../HeaderFooter/header";
 
-const BrandslistingURL =
-  "https://healthkart-render-api.onrender.com/allproducts?brandId=";
+const BrandslistingURL = "http://localhost:9800/allproducts?brandId=";
+// const BrandslistingURL =
+//   "https://healthkart-render-api.onrender.com/allproducts?brandId=";
 // const brandURL = "https://healthkart-render-api.onrender.com/brands";
 
 class BrandListingPage extends React.Component {
@@ -23,9 +24,9 @@ class BrandListingPage extends React.Component {
     };
   }
 
-  handleButtonClick() {
-    this.setState({ linkRender: this.props.match.params.brandId });
-  }
+  // handleButtonClick() {
+  //   this.setState({ linkRender: this.props.match.params.brandId });
+  // }
 
   setDataPerFilter = (data) => {
     this.setState({ brandProductList: data });

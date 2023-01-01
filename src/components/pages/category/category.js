@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const categoryURL = "https://healthkart-render-api.onrender.com/categories";
+const categoryURL = "http://localhost:9800/categories";
+// const categoryURL = "https://healthkart-render-api.onrender.com/categories";
 
 class Categories extends React.Component {
   constructor() {
