@@ -51,8 +51,8 @@ class Login extends React.Component {
           <h1 className="login-heading">Login</h1>
           <h3>{this.state.message}</h3>
           <form className="row">
-            <div class="form-group col-md-6">
-              <label for="email" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="email" className="input-headings">
                 Email
               </label>
               <input
@@ -60,13 +60,13 @@ class Login extends React.Component {
                 name="email"
                 placeholder="Enter Your email"
                 value={this.state.email}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="email"
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group col-md-6">
-              <label for="password" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="password" className="input-headings">
                 Password
               </label>
               <input
@@ -74,7 +74,7 @@ class Login extends React.Component {
                 name="password"
                 placeholder="Enter Your Password"
                 value={this.state.password}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="password"
                 onChange={this.handleChange}
               />

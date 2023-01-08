@@ -22,72 +22,77 @@ const trendingWheyURL =
   "https://healthkart-render-api.onrender.com/allproducts/trendingwhey";
 const gainersURL =
   "https://healthkart-render-api.onrender.com/allproducts/gainers";
-// const HomePage = () => {
+
+const HomePage = () => {
+  return (
+    <>
+      <Header />
+      <AddCarousel />
+      <FlashSaleCarousel />
+      <TrendingNowCarousel />
+      <QuickSearch />
+      <TrendingWheyCarousel />
+      <GainersCarousel />
+      <Advert />
+      <Extras />
+    </>
+  );
+};
+
+// class HomePage extends React.Component {
+// constructor() {
+//   super();
+//   this.state = {
+//     flashSaleProducts: "",
+//     trendingProducts: "",
+//     wheyProducts: "",
+//     gainers: "",
+//   };
+// }
+
+// render() {
 //   return (
 //     <>
+//       <Header />
 //       <AddCarousel />
-//       <OwlCarousel />
-//       <QuickSearch />
+//       {/* <OwlCarousel /> */}
+// <FlashSaleCarousel />
+// <TrendingNowCarousel />
+// <QuickSearch />
+// <TrendingWheyCarousel />
+// <GainersCarousel />
 //       <Advert />
+//       {/* <FilterNav /> */}
 //       <Extras />
 //     </>
 //   );
-// };
-
-class HomePage extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      flashSaleProducts: "",
-      trendingProducts: "",
-      wheyProducts: "",
-      gainers: "",
-    };
-  }
-
-  render() {
-    return (
-      <>
-        <Header />
-        <AddCarousel />
-        {/* <OwlCarousel /> */}
-        <FlashSaleCarousel />
-        <TrendingNowCarousel />
-        <QuickSearch />
-        <TrendingWheyCarousel />
-        <GainersCarousel />
-        <Advert />
-        {/* <FilterNav /> */}
-        <Extras />
-      </>
-    );
-  }
-  // componentDidMount() {
-  //   fetch(flashSaleURL, { method: "GET" })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       this.setState({ flashSaleProducts: data });
-  //     });
-  //   fetch(trendingNowURL, { method: "GET" })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       this.setState({ trendingProducts: data });
-  //     });
-  //   fetch(trendingWheyURL, { method: "GET" })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       this.setState({ wheyProducts: data });
-  //     });
-  //   fetch(gainersURL, { method: "GET" })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       this.setState({ gainers: data });
-  //     });
-  // }
-}
+// }
+// componentDidMount() {
+//   fetch(flashSaleURL, { method: "GET" })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       this.setState({ flashSaleProducts: data });
+//     });
+//   fetch(trendingNowURL, { method: "GET" })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       this.setState({ trendingProducts: data });
+//     });
+//   fetch(trendingWheyURL, { method: "GET" })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       this.setState({ wheyProducts: data });
+//     });
+//   fetch(gainersURL, { method: "GET" })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       this.setState({ gainers: data });
+//     });
+// }
+// }
 
 export default HomePage;

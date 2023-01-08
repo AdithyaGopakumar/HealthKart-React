@@ -10,9 +10,9 @@ const BrandDisplay = () => {
   return (
     <>
       <Header />
-      <div class="container brands-and-category">
-        <h1 class="container heading-text">Select From Our Top Brands:</h1>
-        <div class="container">
+      <div className="container brands-and-category">
+        <h1 className="container heading-text">Select From Our Top Brands:</h1>
+        <div className="container">
           <Brand />
         </div>
       </div>

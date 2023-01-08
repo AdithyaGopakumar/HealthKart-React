@@ -2,223 +2,79 @@
   "cart": [
     [
       {
-        "_id": "636b60f5512bfa988dd43ba5",
-        "id": 19,
-        "product_name": "ON Gold Standard 100% Whey Protein 5 lb Chocolate",
-        "category": "Protein",
-        "category_id": 1,
-        "brand": "Optimum Nutrition",
-        "brand_id": 2,
-        "image": "https://i.ibb.co/dKDn9yR/Optimum-Nutrition-Gold-Standard-100.jpg",
-        "offer": 12,
+        "_id": "637b6c8446fefd94860d3eed",
+        "id": 27,
+        "product_name": "Labrada Muscle Mass Gainer, 6.61 lb, Chocolate",
+        "category": "Gainer",
+        "category_id": 2,
+        "brand": "Labrada",
+        "brand_id": 7,
+        "image": "https://img5.hkrtcdn.com/19806/prd_1980574-Labrada-Muscle-Mass-Gainer-6.61-lb-Chocolate_o.jpg",
+        "offer": 16,
         "rating": 4.4,
-        "reviews": 3042,
-        "sell_price": 7127,
-        "old_price": 8099,
-        "premium_price": 6913
-      }
-    ],
-    [
+        "reviews": 534,
+        "sell_price": 3515,
+        "old_price": 4199,
+        "premium_price": 3339
+      },
       {
-        "_id": "636b60f5512bfa988dd43b9b",
-        "id": 9,
-        "product_name": "MuscleBlaze Raw Whey Protein 80%, 2.2 lb",
-        "category": "Protein",
-        "category_id": 1,
+        "_id": "637b6c8446fefd94860d3ed6",
+        "id": 4,
+        "product_name": "MuscleBlaze High Protein Muesli, 1 kg, Dark Chocolate",
+        "category": "Supplement",
+        "category_id": 3,
         "brand": "MuscleBlaze",
         "brand_id": 1,
-        "image": "https://i.ibb.co/1fRdhSH/Raw-Whey.webp",
-        "offer": 29,
+        "image": "https://i.ibb.co/pWmB3jt/muesli.jpg",
+        "offer": 18,
         "rating": 4.5,
-        "reviews": 2217,
-        "sell_price": 1999,
-        "old_price": 2850,
-        "premium_price": 1939
-      }
-    ],
-    [
-      {
-        "_id": "637b6c8446fefd94860d3ee4",
-        "id": 18,
-        "product_name": "Dymatize Elite 100% Whey Protein, 5 lb, Cookies & Cream",
-        "category": "Protein",
-        "category_id": 1,
-        "brand": "Other",
-        "brand_id": 9,
-        "image": "https://i.ibb.co/Tg4WFrs/dymatize.webp",
-        "offer": 25,
-        "rating": 4.3,
-        "reviews": 368,
-        "sell_price": 8889,
-        "old_price": 11999,
-        "premium_price": 8445
-      }
-    ],
-    [
-      {
-        "_id": "637b6c8446fefd94860d3ee4",
-        "id": 18,
-        "product_name": "Dymatize Elite 100% Whey Protein, 5 lb, Cookies & Cream",
-        "category": "Protein",
-        "category_id": 1,
-        "brand": "Other",
-        "brand_id": 9,
-        "image": "https://i.ibb.co/Tg4WFrs/dymatize.webp",
-        "offer": 25,
-        "rating": 4.3,
-        "reviews": 368,
-        "sell_price": 8889,
-        "old_price": 11999,
-        "premium_price": 8445
-      }
-    ],
-    [
-      {
-        "_id": "637b6c8446fefd94860d3edd",
-        "id": 11,
-        "product_name": "MB Fuel One Whey Protein Immunity+, 2.2 lb, Chocolate",
-        "category": "Protein",
-        "category_id": 1,
-        "brand": "MuscleBlaze",
-        "brand_id": 1,
-        "image": "https://i.ibb.co/L1rM9H4/Fuel-One-Whey.webp",
-        "offer": 17,
-        "rating": 4.3,
-        "reviews": 1509,
-        "sell_price": 1899,
-        "old_price": 2299,
-        "premium_price": 1842
+        "reviews": 585,
+        "sell_price": 669,
+        "old_price": 825,
+        "premium_price": 649
       }
     ]
   ],
   "orders": [
     {
-      "id": 9573,
+      "id": 757,
       "user": "Adithya Gopakumar",
       "email": "adithya@gmail.com",
-      "address": "4256346",
-      "phone": "65346565",
-      "total": 7127,
-      "items": [
-        {
-          "_id": "636b60f5512bfa988dd43ba5",
-          "id": 19,
-          "product_name": "ON Gold Standard 100% Whey Protein 5 lb Chocolate",
-          "category": "Protein",
-          "category_id": 1,
-          "brand": "Optimum Nutrition",
-          "brand_id": 2,
-          "image": "https://i.ibb.co/dKDn9yR/Optimum-Nutrition-Gold-Standard-100.jpg",
-          "offer": 12,
-          "rating": 4.4,
-          "reviews": 3042,
-          "sell_price": 7127,
-          "old_price": 8099,
-          "premium_price": 6913
-        }
-      ]
-    },
-    {
-      "id": 5460,
-      "user": "Adithya Gopakumar",
-      "email": "adithya@gmail.com",
-      "address": "789",
-      "phone": "6876876",
-      "total": 1999,
-      "items": [
-        {
-          "_id": "636b60f5512bfa988dd43b9b",
-          "id": 9,
-          "product_name": "MuscleBlaze Raw Whey Protein 80%, 2.2 lb",
-          "category": "Protein",
-          "category_id": 1,
-          "brand": "MuscleBlaze",
-          "brand_id": 1,
-          "image": "https://i.ibb.co/1fRdhSH/Raw-Whey.webp",
-          "offer": 29,
-          "rating": 4.5,
-          "reviews": 2217,
-          "sell_price": 1999,
-          "old_price": 2850,
-          "premium_price": 1939
-        }
-      ]
-    },
-    {
-      "id": 7667,
-      "user": "AdithyaGopakumar",
-      "email": "adithya@gmail.com",
-      "address": "hello how are you",
-      "phone": "0987654321",
-      "total": 8889,
-      "items": [
-        {
-          "_id": "637b6c8446fefd94860d3ee4",
-          "id": 18,
-          "product_name": "Dymatize Elite 100% Whey Protein, 5 lb, Cookies & Cream",
-          "category": "Protein",
-          "category_id": 1,
-          "brand": "Other",
-          "brand_id": 9,
-          "image": "https://i.ibb.co/Tg4WFrs/dymatize.webp",
-          "offer": 25,
-          "rating": 4.3,
-          "reviews": 368,
-          "sell_price": 8889,
-          "old_price": 11999,
-          "premium_price": 8445
-        }
-      ]
-    },
-    {
-      "id": 7662,
-      "user": "Alan Ben",
-      "email": "alanben@123.com",
       "address": "123 street , abc building, xyz",
-      "phone": "789798798798",
-      "total": 8889,
+      "phone": "123154325",
+      "total": 4184,
       "items": [
         {
-          "_id": "637b6c8446fefd94860d3ee4",
-          "id": 18,
-          "product_name": "Dymatize Elite 100% Whey Protein, 5 lb, Cookies & Cream",
-          "category": "Protein",
-          "category_id": 1,
-          "brand": "Other",
-          "brand_id": 9,
-          "image": "https://i.ibb.co/Tg4WFrs/dymatize.webp",
-          "offer": 25,
-          "rating": 4.3,
-          "reviews": 368,
-          "sell_price": 8889,
-          "old_price": 11999,
-          "premium_price": 8445
-        }
-      ]
-    },
-    {
-      "id": 2225,
-      "user": "AlanBen",
-      "email": "alanben@123.com",
-      "address": "346532565346",
-      "phone": "54754676457",
-      "total": 1899,
-      "items": [
+          "_id": "637b6c8446fefd94860d3eed",
+          "id": 27,
+          "product_name": "Labrada Muscle Mass Gainer, 6.61 lb, Chocolate",
+          "category": "Gainer",
+          "category_id": 2,
+          "brand": "Labrada",
+          "brand_id": 7,
+          "image": "https://img5.hkrtcdn.com/19806/prd_1980574-Labrada-Muscle-Mass-Gainer-6.61-lb-Chocolate_o.jpg",
+          "offer": 16,
+          "rating": 4.4,
+          "reviews": 534,
+          "sell_price": 3515,
+          "old_price": 4199,
+          "premium_price": 3339
+        },
         {
-          "_id": "637b6c8446fefd94860d3edd",
-          "id": 11,
-          "product_name": "MB Fuel One Whey Protein Immunity+, 2.2 lb, Chocolate",
-          "category": "Protein",
-          "category_id": 1,
+          "_id": "637b6c8446fefd94860d3ed6",
+          "id": 4,
+          "product_name": "MuscleBlaze High Protein Muesli, 1 kg, Dark Chocolate",
+          "category": "Supplement",
+          "category_id": 3,
           "brand": "MuscleBlaze",
           "brand_id": 1,
-          "image": "https://i.ibb.co/L1rM9H4/Fuel-One-Whey.webp",
-          "offer": 17,
-          "rating": 4.3,
-          "reviews": 1509,
-          "sell_price": 1899,
-          "old_price": 2299,
-          "premium_price": 1842
+          "image": "https://i.ibb.co/pWmB3jt/muesli.jpg",
+          "offer": 18,
+          "rating": 4.5,
+          "reviews": 585,
+          "sell_price": 669,
+          "old_price": 825,
+          "premium_price": 649
         }
       ]
     }

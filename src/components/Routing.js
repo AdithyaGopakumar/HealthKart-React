@@ -26,17 +26,18 @@ import Carousel from "./Carousel/flashSale";
 
 const AppRouter = () => {
   const [cart, setCart] = useState([]);
+  sessionStorage.setItem("cart", cart.length);
   console.log("this is the main cart", cart);
   const cartIds = cart.map((item) => {
     return item.id;
   });
   console.log(cartIds, "these are the ids of cart item");
 
+  const [ignored, forcedUpdate] = useReducer((x) => x + 1, 0);
+
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
   };
-
-  const [ignored, forcedUpdate] = useReducer((x) => x + 1, 0);
 
   const removeFromCart = (product) => {
     if (cartIds.indexOf(product.id) > -1) {

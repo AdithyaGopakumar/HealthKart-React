@@ -1,8 +1,11 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import Cart from "../cart/cart";
 // import AppRouter from "../Routing";
 
 const getUserUrl = "http://localhost:5000/api/auth/userInfo";
+// let cartItems = sessionStorage.getItem("cart");
+// console.log(cartItems);
 
 class Header extends React.Component {
   constructor() {
@@ -26,7 +29,7 @@ class Header extends React.Component {
       // console.log(this.state.userData, "form if");
       return (
         <>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="#">
             My Accounts & Orders
           </Link>
           <Link className="header-link" to={"/register"}>
@@ -45,7 +48,7 @@ class Header extends React.Component {
       sessionStorage.setItem("userData", outArr);
       return (
         <>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="#">
             My Accounts & Orders
           </Link>
           <Link className="header-link" to={"/"}>
@@ -57,6 +60,9 @@ class Header extends React.Component {
           <Link className="header-link" to="/cart">
             <div className="cart-icn">
               <ion-icon name="cart-outline"></ion-icon>
+              <span className="cart-item-number">
+                {sessionStorage.getItem("cart")}
+              </span>
             </div>
           </Link>
         </>
@@ -133,13 +139,13 @@ class Header extends React.Component {
           <Link className="header-link" to="/deals">
             Deals
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="#">
             Gift-Card
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="#">
             Blog,Videos & More
           </Link>
-          <Link className="header-link" href="#">
+          <Link className="header-link" to="#">
             My Accounts & Orders
           </Link>
           <div className="header-btns">
@@ -169,6 +175,8 @@ class Header extends React.Component {
           userData: data,
         });
       });
+    // let cartItems = sessionStorage.getItem("cart");
+    // this.setState({ cartItem: cartItems });
   }
 }
 

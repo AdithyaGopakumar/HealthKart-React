@@ -33,7 +33,7 @@ class BrandListingPage extends React.Component {
   };
 
   render() {
-    console.log(this.props.match.params.brandId);
+    // console.log(this.props.match.params.brandId);
     // this.handleButtonClick();
     return (
       <>

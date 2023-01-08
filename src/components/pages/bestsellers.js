@@ -6,19 +6,19 @@ import GainersCarousel from "../Carousel/gainers";
 import Header from "../HeaderFooter/header";
 import Extras from "../Elements/extras";
 import Advert from "../Elements/advert";
+import QuickSearch from "../Elements/quicksearch";
 
 const BestSellerPage = () => {
   return (
     <>
       <Header />
-      <div className="container">
-        <FlashSaleCarousel />
-        <TrendingNowCarousel />
-        <TrendingWheyCarousel />
-        <GainersCarousel />
-        <Advert />
-        <Extras />
-      </div>
+      <TrendingNowCarousel />
+      <GainersCarousel />
+      <QuickSearch />
+      <FlashSaleCarousel />
+      <TrendingWheyCarousel />
+      <Advert />
+      <Extras />
     </>
   );
 };

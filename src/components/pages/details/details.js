@@ -20,6 +20,7 @@ class DetailsPage extends React.Component {
 
     this.state = {
       details: "",
+
       // brandName: "",
       // categoryName: "",
       // brandID: sessionStorage.getItem("brandId"), // for backbutton
@@ -122,10 +123,14 @@ class DetailsPage extends React.Component {
                     <ion-icon id="buy-icon" name="cart-outline"></ion-icon>
                     <span>ADD TO CART</span>
                   </button>
-                  <button id="quick-buy">
+                  {/* <button id="quick-buy">
                     <ion-icon id="buy-icon" name="flash-outline"></ion-icon>
                     <span>QUICK BUY</span>
-                  </button>
+                  </button> */}
+                  <Link to={"/cart"} id="quick-buy">
+                    <ion-icon id="buy-icon" name="cart-outline"></ion-icon>
+                    <span>Go To Cart</span>
+                  </Link>
                 </div>
               </div>
             </div>

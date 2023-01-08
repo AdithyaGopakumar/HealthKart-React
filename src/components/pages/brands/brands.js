@@ -15,32 +15,30 @@ class Brand extends React.Component {
       // console.log(data);
       return data.map((item) => {
         return (
-          <>
-            <div class="brand-category-item">
-              <img
-                src={item.image}
-                alt=""
-                class="brand-category-img category-item-img"
-              />
+          <div className="brand-category-item" key={item.brand_id}>
+            <img
+              src={item.image}
+              alt=""
+              className="brand-category-img category-item-img"
+            />
 
-              <p class="brand-category-text">{item.text}</p>
-              <div class="to-brand-category">
-                <Link
-                  to={`/brand/${item.brand_id}`}
-                  class="brand-category-link"
-                >
-                  Go to {item.brand}
-                </Link>
-              </div>
+            <p className="brand-category-text">{item.text}</p>
+            <div className="to-brand-category">
+              <Link
+                to={`/brand/${item.brand_id}`}
+                className="brand-category-link"
+              >
+                Go to {item.brand}
+              </Link>
             </div>
-          </>
+          </div>
         );
       });
     }
   };
 
   render() {
-    return <>{this.getBrand(this.state.brands)}</>;
+    return <div key={123}>{this.getBrand(this.state.brands)}</div>;
   }
 
   componentDidMount() {
@@ -50,7 +48,7 @@ class Brand extends React.Component {
         // console.log(data);
         this.setState({ brands: data });
       });
-    console.log(this.state.brands, "this is the state");
+    // console.log(this.state.brands, "this is the state");
   }
 }
 

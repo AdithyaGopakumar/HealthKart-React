@@ -61,6 +61,13 @@ html {
 }
 .cart-icn {
   font-size: 2.8rem;
+  position: relative;
+}
+.cart-item-number {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #02b4b2;
+  font-weight: 700;
 }
 .header-bottom {
   display: flex;

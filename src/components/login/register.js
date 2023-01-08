@@ -39,8 +39,8 @@ class Register extends React.Component {
         <div className="container">
           <h1 className="login-heading">Register</h1>
           <form className="row">
-            <div class="form-group col-md-6">
-              <label for="name" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="name" className="input-headings">
                 Name
               </label>
               <input
@@ -48,13 +48,13 @@ class Register extends React.Component {
                 name="name"
                 placeholder="Enter Your Name"
                 value={this.state.name}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="name"
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group col-md-6">
-              <label for="email" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="email" className="input-headings">
                 Email
               </label>
               <input
@@ -62,13 +62,13 @@ class Register extends React.Component {
                 name="email"
                 placeholder="Enter Your email"
                 value={this.state.email}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="email"
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group col-md-6">
-              <label for="password" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="password" className="input-headings">
                 Password
               </label>
               <input
@@ -76,13 +76,13 @@ class Register extends React.Component {
                 name="password"
                 placeholder="Enter Your Password"
                 value={this.state.password}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="password"
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group col-md-6">
-              <label for="phone" className="input-headings">
+            <div className="form-group col-md-6">
+              <label htmlFor="phone" className="input-headings">
                 Phone
               </label>
               <input
@@ -90,7 +90,7 @@ class Register extends React.Component {
                 name="phone"
                 placeholder="Enter Your Phone Number"
                 value={this.state.phone}
-                class="form-control input-box"
+                className="form-control input-box"
                 id="phone"
                 onChange={this.handleChange}
               />

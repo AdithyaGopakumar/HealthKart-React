@@ -48,17 +48,15 @@ class PlaceOrder extends React.Component {
     if (data) {
       return data.map((item) => {
         return (
-          <>
-            <div className="order-cart-list col col-md-3" key={item.id}>
-              <img
-                className="order-cart-img"
-                src={item.image}
-                alt={item.product_name}
-              />
-              <h4 className="order-cart-name">{item.product_name}</h4>
-              <h5 className="order-cart-price">Rs. {item.sell_price}</h5>
-            </div>
-          </>
+          <div className="order-cart-list col col-md-3" key={item.id}>
+            <img
+              className="order-cart-img"
+              src={item.image}
+              alt={item.product_name}
+            />
+            <h4 className="order-cart-name">{item.product_name}</h4>
+            <h5 className="order-cart-price">Rs. {item.sell_price}</h5>
+          </div>
         );
       });
     }
@@ -87,7 +85,7 @@ class PlaceOrder extends React.Component {
                 <input type="hidden" name="total" value={this.state.total} />
                 <div className="row">
                   <div className="form-group col-md-6">
-                    <label for="user" className="control-label input-txt">
+                    <label htmlFor="user" className="control-label input-txt">
                       Your Name
                     </label>
                     <input
@@ -100,7 +98,7 @@ class PlaceOrder extends React.Component {
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="email" className="control-label input-txt">
+                    <label htmlFor="email" className="control-label input-txt">
                       Email
                     </label>
                     <input
@@ -113,7 +111,10 @@ class PlaceOrder extends React.Component {
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="address" className="control-label input-txt">
+                    <label
+                      htmlFor="address"
+                      className="control-label input-txt"
+                    >
                       Address
                     </label>
                     <input
@@ -126,7 +127,7 @@ class PlaceOrder extends React.Component {
                     />
                   </div>
                   <div className="form-group col-md-6">
-                    <label for="phone" className="control-label input-txt">
+                    <label htmlFor="phone" className="control-label input-txt">
                       Phone
                     </label>
                     <input

@@ -21,25 +21,25 @@ class Cart extends React.Component {
     if (data) {
       return data.map((item) => {
         return (
-          <div class="ind-item container">
+          <div className="ind-item container" key={item.id}>
             <img
               src={item.image}
               alt={item.product_name}
-              class="cart-item-img"
+              className="cart-item-img"
             />
-            <div class="cart-item-data">
-              <p class="cart-item-name">{item.product_name}</p>
-              <div class="cart-price-flex">
-                <span class="cart-item-price">₹ {item.sell_price}</span>
-                <span class="cart-item-offer">{item.offer}% OFF</span>
+            <div className="cart-item-data">
+              <p className="cart-item-name">{item.product_name}</p>
+              <div className="cart-price-flex">
+                <span className="cart-item-price">₹ {item.sell_price}</span>
+                <span className="cart-item-offer">{item.offer}% OFF</span>
               </div>
               <div>
-                <span class="cart-item-mrp-text">MRP: </span>
-                <span class="cart-item-old-price">₹ {item.old_price}</span>
+                <span className="cart-item-mrp-text">MRP: </span>
+                <span className="cart-item-old-price">₹ {item.old_price}</span>
               </div>
             </div>
             <button
-              class="remove-item"
+              className="remove-item"
               onClick={() => {
                 this.props.removeFromCart(item);
               }}
@@ -85,41 +85,41 @@ class Cart extends React.Component {
     return (
       <>
         <Header />
-        <section class="cart">
-          <div class="container">
-            <div class="row">
-              <div class="col col-md-7">
-                <div class="shopping-cart">
-                  <h1 class="cart-heading">
+        <section className="cart">
+          <div className="container">
+            <div className="row">
+              <div className="col col-md-7">
+                <div className="shopping-cart">
+                  <h1 className="cart-heading">
                     Shopping Cart ({this.state.currCart.length} items)
                   </h1>
                   <>{this.renderCart(this.state.currCart)}</>
                 </div>
               </div>
-              <div class="col col-md-5">
-                <div class="order-summary">
-                  <span class="summary">Order Summary</span>
-                  <span class="number-of-items">
+              <div className="col col-md-5">
+                <div className="order-summary">
+                  <span className="summary">Order Summary</span>
+                  <span className="number-of-items">
                     ({this.state.currCart.length} items)
                   </span>
-                  <div class="total-mpr flex mt-5">
-                    <span class="price-text">Total MRP</span>
-                    <span class="mrp">₹ {getMRP}</span>
+                  <div className="total-mpr flex mt-5">
+                    <span className="price-text">Total MRP</span>
+                    <span className="mrp">₹ {getMRP}</span>
                   </div>
-                  <div class="total-discounts flex">
-                    <span class="price-text">Total Discounts</span>
-                    <span class="discount">-₹ {discount}</span>
+                  <div className="total-discounts flex">
+                    <span className="price-text">Total Discounts</span>
+                    <span className="discount">-₹ {discount}</span>
                   </div>
-                  <div class="shipping-charge flex">
-                    <span class="price-text">Shipping Charges</span>
-                    <span class="free">FREE</span>
+                  <div className="shipping-charge flex">
+                    <span className="price-text">Shipping Charges</span>
+                    <span className="free">FREE</span>
                   </div>
                   <hr />
-                  <div class="payable-amount flex">
-                    <span class="price-text-bold">Payable Amount</span>
-                    <span class="pay-rate">₹ {getTotal}</span>
+                  <div className="payable-amount flex">
+                    <span className="price-text-bold">Payable Amount</span>
+                    <span className="pay-rate">₹ {getTotal}</span>
                   </div>
-                  <p class="show-savings">
+                  <p className="show-savings">
                     You will Save ₹ {discount} & Eligible for Free Shipping on
                     this order
                   </p>
