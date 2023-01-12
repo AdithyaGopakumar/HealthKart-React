@@ -1,6 +1,8 @@
 import React from "react";
 import "../orders/placeOrder.css";
 import Header from "../HeaderFooter/header";
+import Extras from "../Elements/extras";
+import Advert from "../Elements/advert";
 // import axios from "axios";
 // const URL = "https://healthkart-render-api.onrender.com/cart";
 const URL = "http://localhost:8700/cart";
@@ -18,7 +20,7 @@ class PlaceOrder extends React.Component {
 
     // let sessionData
     this.state = {
-      order_id: Math.floor(Math.random() * 10000),
+      id: Math.floor(Math.random() * 10000),
       user: sessionData ? sessionData[0] : "",
       email: sessionData ? sessionData[1] : "",
       address: "",
@@ -76,7 +78,9 @@ class PlaceOrder extends React.Component {
         <Header />
         <div className="container">
           <div className="panel panel-primary">
-            <h1 className="panel-heading order-heading">Your Orders</h1>
+            <h1 className="panel-heading order-heading my-5">
+              Confirm Your Orders
+            </h1>
             <div className="panel-body">
               <form
                 // onSubmit={this.checkOut}
@@ -84,11 +88,7 @@ class PlaceOrder extends React.Component {
                 method="POST"
               >
                 {/* <form> */}
-                <input
-                  type="hidden"
-                  name="order_id"
-                  value={this.state.order_id}
-                />
+                <input type="hidden" name="order_id" value={this.state.id} />
                 <input type="hidden" name="total" value={this.state.total} />
                 <div className="row">
                   <div className="form-group col-md-6">
@@ -168,25 +168,27 @@ class PlaceOrder extends React.Component {
             </div>
           </div>
         </div>
+        <Advert />
+        <Extras />
       </>
     );
   }
 
   componentDidMount() {
-    let orders = this.props.cart;
-    console.log(orders, "this is orders");
-    fetch(URL, {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(orders),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "this is in db");
-      });
+    // let orders = this.props.cart;
+    // console.log(orders, "this is orders");
+    // fetch(URL, {
+    //   method: "POST",
+    //   headers: {
+    //     accept: "application/json",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(orders),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data, "this is in db");
+    //   });
     this.setState({ items: this.props.cart });
     let total = this.props.cart.reduce((acc, curr) => {
       return acc + curr.sell_price;
