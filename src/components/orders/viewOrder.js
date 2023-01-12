@@ -28,6 +28,31 @@ class ViewOrders extends React.Component {
       ? sessionStorage.getItem("userData").split(",")
       : [];
 
+    if (this.props.location) {
+      let query = this.props.location.search.split("&");
+      if (query) {
+        let sdata = {
+          status: query[0].split("=")[1],
+          date: query[2].split("=")[1],
+          bank_name: query[3].split("=")[1],
+        };
+        let id = query[1].split("=")[1].split("_")[1];
+        // fetch(`${orderApi}?order_id=${id}`, { method: "GET" })
+        //   .then((res) => res.json())
+        //   .then((data) => {
+        //     console.log(sdata);
+        //   });
+        fetch(`${orderApi}/1`, {
+          method: "PATCH",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(sdata),
+        });
+      }
+    }
+
     axios.get(`${orderApi}`).then((res) => {
       console.log(res.data, "this is data from order api");
       this.setState({ orders: res.data });

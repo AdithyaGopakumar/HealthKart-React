@@ -2,81 +2,53 @@
   "cart": [
     [
       {
-        "_id": "637b6c8446fefd94860d3eed",
-        "id": 27,
-        "product_name": "Labrada Muscle Mass Gainer, 6.61 lb, Chocolate",
+        "_id": "637b6c8446fefd94860d3ed3",
+        "id": 1,
+        "product_name": "MuscleBlaze Super Gainer XXL, 11 lb, Chocolate Mint",
         "category": "Gainer",
         "category_id": 2,
-        "brand": "Labrada",
-        "brand_id": 7,
-        "image": "https://img5.hkrtcdn.com/19806/prd_1980574-Labrada-Muscle-Mass-Gainer-6.61-lb-Chocolate_o.jpg",
-        "offer": 16,
-        "rating": 4.4,
-        "reviews": 534,
-        "sell_price": 3515,
-        "old_price": 4199,
-        "premium_price": 3339
-      },
-      {
-        "_id": "637b6c8446fefd94860d3ed6",
-        "id": 4,
-        "product_name": "MuscleBlaze High Protein Muesli, 1 kg, Dark Chocolate",
-        "category": "Supplement",
-        "category_id": 3,
         "brand": "MuscleBlaze",
         "brand_id": 1,
-        "image": "https://i.ibb.co/pWmB3jt/muesli.jpg",
-        "offer": 18,
+        "image": "https://img4.hkrtcdn.com/13526/prd_1352563-MuscleBlaze-Super-Gainer-XXL-11-lb-Chocolate-Mint_o.jpg",
+        "offer": 41,
         "rating": 4.5,
-        "reviews": 585,
-        "sell_price": 669,
-        "old_price": 825,
-        "premium_price": 649
+        "reviews": 6145,
+        "sell_price": 3799,
+        "old_price": 6449,
+        "premium_price": 3685
       }
     ]
   ],
   "orders": [
     {
-      "id": 757,
-      "user": "Adithya Gopakumar",
+      "order_id": 5425,
+      "user": "AdithyaGopakumar",
       "email": "adithya@gmail.com",
       "address": "123 street , abc building, xyz",
-      "phone": "123154325",
-      "total": 4184,
+      "phone": "123123",
+      "total": 3799,
       "items": [
         {
-          "_id": "637b6c8446fefd94860d3eed",
-          "id": 27,
-          "product_name": "Labrada Muscle Mass Gainer, 6.61 lb, Chocolate",
+          "_id": "637b6c8446fefd94860d3ed3",
+          "id": 1,
+          "product_name": "MuscleBlaze Super Gainer XXL, 11 lb, Chocolate Mint",
           "category": "Gainer",
           "category_id": 2,
-          "brand": "Labrada",
-          "brand_id": 7,
-          "image": "https://img5.hkrtcdn.com/19806/prd_1980574-Labrada-Muscle-Mass-Gainer-6.61-lb-Chocolate_o.jpg",
-          "offer": 16,
-          "rating": 4.4,
-          "reviews": 534,
-          "sell_price": 3515,
-          "old_price": 4199,
-          "premium_price": 3339
-        },
-        {
-          "_id": "637b6c8446fefd94860d3ed6",
-          "id": 4,
-          "product_name": "MuscleBlaze High Protein Muesli, 1 kg, Dark Chocolate",
-          "category": "Supplement",
-          "category_id": 3,
           "brand": "MuscleBlaze",
           "brand_id": 1,
-          "image": "https://i.ibb.co/pWmB3jt/muesli.jpg",
-          "offer": 18,
+          "image": "https://img4.hkrtcdn.com/13526/prd_1352563-MuscleBlaze-Super-Gainer-XXL-11-lb-Chocolate-Mint_o.jpg",
+          "offer": 41,
           "rating": 4.5,
-          "reviews": 585,
-          "sell_price": 669,
-          "old_price": 825,
-          "premium_price": 649
+          "reviews": 6145,
+          "sell_price": 3799,
+          "old_price": 6449,
+          "premium_price": 3685
         }
-      ]
+      ],
+      "id": 1,
+      "status": "TXN_SUCCESS",
+      "date": "2023-01-12%2009:30:09.0",
+      "bank_name": "HDFC%20Bank"
     }
   ]
 }

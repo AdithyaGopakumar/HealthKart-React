@@ -1,7 +1,7 @@
 import React from "react";
 import "../orders/placeOrder.css";
 import Header from "../HeaderFooter/header";
-
+// import axios from "axios";
 // const URL = "https://healthkart-render-api.onrender.com/cart";
 const URL = "http://localhost:8700/cart";
 
@@ -18,7 +18,7 @@ class PlaceOrder extends React.Component {
 
     // let sessionData
     this.state = {
-      id: Math.floor(Math.random() * 10000),
+      order_id: Math.floor(Math.random() * 10000),
       user: sessionData ? sessionData[0] : "",
       email: sessionData ? sessionData[1] : "",
       address: "",
@@ -30,18 +30,21 @@ class PlaceOrder extends React.Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(this.props);
+    // console.log(this.props);
   };
-  checkOut = () => {
+
+  checkOut = (e) => {
+    e.preventDefault();
+    let obj = this.state;
     fetch(orderURL, {
       method: "POST",
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.state),
-    }).then(this.props.history.push("viewOrders"));
-    // .then(console.log("order placed"));
+      body: JSON.stringify(obj),
+    }).then(console.log("orderplaced"));
+    // .then(this.props.history.push("viewOrders"));
   };
 
   renderCart = (data) => {
@@ -75,8 +78,12 @@ class PlaceOrder extends React.Component {
           <div className="panel panel-primary">
             <h1 className="panel-heading order-heading">Your Orders</h1>
             <div className="panel-body">
-              {/* <form action="http://localhost:4100/paynow" method="POST"> */}
-              <form>
+              <form
+                // onSubmit={this.checkOut}
+                action="http://localhost:4100/paynow"
+                method="POST"
+              >
+                {/* <form> */}
                 <input
                   type="hidden"
                   name="order_id"
@@ -149,12 +156,15 @@ class PlaceOrder extends React.Component {
                 </div>
                 <button
                   className="check-out-btn"
-                  onClick={this.checkOut}
+                  // onClick={this.checkOut}
                   type="submit"
                 >
                   Check Out
                 </button>
               </form>
+              <button className="check-out-btn" onClick={this.checkOut}>
+                place
+              </button>
             </div>
           </div>
         </div>
@@ -163,11 +173,6 @@ class PlaceOrder extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ items: this.props.cart });
-    let total = this.props.cart.reduce((acc, curr) => {
-      return acc + curr.sell_price;
-    }, 0);
-    this.setState({ total: total });
     let orders = this.props.cart;
     console.log(orders, "this is orders");
     fetch(URL, {
@@ -182,6 +187,12 @@ class PlaceOrder extends React.Component {
       .then((data) => {
         console.log(data, "this is in db");
       });
+    this.setState({ items: this.props.cart });
+    let total = this.props.cart.reduce((acc, curr) => {
+      return acc + curr.sell_price;
+    }, 0);
+    this.setState({ total: total });
+    console.log(this.state, "this is state");
   }
 }
 
