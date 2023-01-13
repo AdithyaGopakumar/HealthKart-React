@@ -53,7 +53,7 @@ class ViewOrders extends React.Component {
       }
     }
 
-    axios.get(`${orderApi}`).then((res) => {
+    axios.get(`${orderApi}?email=${sessionData[1]}`).then((res) => {
       console.log(res.data, "this is data from order api");
       this.setState({ orders: res.data });
     });

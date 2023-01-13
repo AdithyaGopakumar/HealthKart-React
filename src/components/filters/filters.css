@@ -2,7 +2,7 @@
 .brands-link:visited {
   text-decoration: none;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .brands-link:hover,
 .brands-link:active {
@@ -18,7 +18,8 @@
   margin-bottom: 1rem;
 }
 .filter-headings {
-  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+  margin: 3.6rem 0 1rem 0;
 }
 /* .filter-option {
   display: flex;
@@ -27,7 +28,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333;
   margin: 1rem 0;
 }

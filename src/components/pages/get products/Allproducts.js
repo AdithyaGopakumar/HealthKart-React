@@ -24,12 +24,12 @@ class AllProducts extends React.Component {
                     alt={item.product_name}
                   />
                 </Link>
-                <a href="#">
+                {/* <a href="#">
                   <ion-icon
                     className="heart-icon"
                     name="heart-outline"
                   ></ion-icon>
-                </a>
+                </a> */}
                 <div className="offer-tag">
                   <span className="offer">{item.offer}%</span>
                 </div>

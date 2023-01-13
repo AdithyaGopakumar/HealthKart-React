@@ -25,7 +25,7 @@ class CostFilter extends React.Component {
   render() {
     return (
       <>
-        <h3>Cost</h3>
+        <h3 className="filter-headings">Cost</h3>
 
         <div onChange={this.categoryFilter}>
           <label className="radio">

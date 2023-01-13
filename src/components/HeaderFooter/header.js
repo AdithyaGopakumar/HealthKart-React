@@ -7,6 +7,11 @@ const getUserUrl = "http://localhost:5000/api/auth/userInfo";
 // let cartItems = sessionStorage.getItem("cart");
 // console.log(cartItems);
 
+const orderApi = "http://localhost:8700/orders";
+let sessionData = sessionStorage.getItem("userData")
+  ? sessionStorage.getItem("userData").split(",")
+  : [];
+
 class Header extends React.Component {
   constructor() {
     super();
